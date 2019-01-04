@@ -83,15 +83,18 @@ const trigger83 = "governo";
 const trigger84 = "il taglio di guerra";
 const trigger85 = "busi va all'inferno";
 const trigger86 = "soddisfa il busi";
-const trigger87 = "andate via"
-const trigger88 = "merja ha le mani gi"
-const trigger89 = "busi è un po' tardo"
-const trigger90 = "guerra a 90"
-const trigger91 = "koreani mangiacani"
-const trigger92 = "ledda studia chimica"
-const trigger93 = "sfoglia il quaderno"
-const trigger94 = "stare al mondo"
-const businfo_text = "Il Busata by @LeddaZ\nVersione 1.5.2 Beta 1 del 28/12/2018\nDigita BusiTrigger per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 91 (26 parole, 8 foto e 57 audio)"
+const trigger87 = "andate via";
+const trigger88 = "merja ha le mani gi";
+const trigger89 = "busi è un po' tardo";
+const trigger90 = "guerra a 90";
+const trigger91 = "koreani mangiacani";
+const trigger92 = "ledda studia chimica";
+const trigger93 = "sfoglia il quaderno";
+const trigger94 = "stare al mondo";
+const trigger95 = "basta battere";
+const trigger96 = "si diventa deficienti";
+const trigger97 = "metto 2 subito";
+const businfo_text = "Il Busata by @LeddaZ\nVersione 1.5.2 Beta 2 del 4/1/2019\nDigita BusiTrigger per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 94 (26 parole, 8 foto e 60 audio)"
 const bot = new Bot(token, {polling: true});
 bot.on("message", (msg) => {
   if (msg.text.toString().toLowerCase().indexOf(trigger1) === 0)
@@ -280,4 +283,10 @@ bot.on("message", (msg) => {
 	bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/xX0PXKeHbZ_2.mp3");
   if (msg.text.toString().toLowerCase().indexOf(trigger94) === 0)
 	bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/ef7lyZ_R4v8q.mp3");
+  if (msg.text.toString().toLowerCase().indexOf(trigger95) === 0)
+	bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/NQqAasiOd5QJ.mp3");
+  if (msg.text.toString().toLowerCase().indexOf(trigger96) === 0)
+	bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/9vlhOmgwt3t4.mp3");
+  if (msg.text.toString().toLowerCase().indexOf(trigger97) === 0)
+	bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/9HgttDKhk5kc.mp3");
 })
