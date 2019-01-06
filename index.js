@@ -94,7 +94,7 @@ const trigger94 = "stare al mondo";
 const trigger95 = "basta battere";
 const trigger96 = "si diventa deficienti";
 const trigger97 = "metto 2 subito";
-const businfo_text = "Il Busata by @LeddaZ\nVersione 1.6.0 Beta 1 del 6/1/2019\nDigita BusiTrigger per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 94 (26 parole, 8 foto e 60 audio)"
+const businfo_text = "Il Busata by @LeddaZ\nVersione 1.6.0 Beta 2 del 6/1/2019\nDigita BusiTrigger per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 92 (23 parole, 8 foto e 61 audio)"
 const bot = new Bot(token, {polling: true});
 bot.on("message", (msg) => {
   if (msg.text.toString().toLowerCase().indexOf(trigger1) === 0)
