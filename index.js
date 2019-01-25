@@ -6,7 +6,7 @@
 const Bot = require("node-telegram-bot-api");
 const request = require("request");
 //Token del bot
-const token = "697036602:AAHwtJbcP7mp-nNzepGJibUUruUOksLOqXY";
+const token = "664523082:AAElIGN2-7EIsLyN1M0AWc0dGCnork8piNA";
 //Trigger
 const trigger1 = "loddo";
 const trigger2 = "buongiorno";
@@ -103,7 +103,7 @@ const trigger96 = "si diventa deficienti";
 const trigger97 = "metto 2 subito";
 const trigger98 = "porta la cartellina";
 //Testo di Businfo e /start
-const businfo_text = "Il Busata by @LeddaZ\nVersione 1.6.3 Beta 1 del 25/1/2019\nDigita BusiTrigger per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 93 (23 parole, 8 foto e 62 audio)";
+const businfo_text = "Il Busata by @LeddaZ\nVersione 1.6.3 Beta 2 del 25/1/2019\nDigita BusiTrigger per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 93 (23 parole, 8 foto e 62 audio)";
 //Attivazione del bot
 const bot = new Bot(token, { polling: true });
 
@@ -335,7 +335,7 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 
     //Lista audio pagina 3
 	if (action === '3') {
-		text = "BusiAudio - Pagina 3\nDevo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti, Metto 2 subito";
+		text = "BusiAudio - Pagina 3\nDevo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti";
     }
 
     //Lista audio pagina 4
