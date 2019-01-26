@@ -103,22 +103,22 @@ const trigger96 = "si diventa deficienti";
 const trigger97 = "metto 2 subito";
 const trigger98 = "porta la cartellina";
 //Testo di Businfo e /start
-const businfo_text = "Il Busata by @LeddaZ\nVersione 1.6.3 Beta 2 del 25/1/2019\nDigita BusiTrigger per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 93 (23 parole, 8 foto e 62 audio)";
+const businfo_text = "<b>Il Busata</b> by <b>@LeddaZ</b>\nVersione <b>1.6.4 Beta 1</b> del 26/1/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 93 (23 parole, 8 foto e 62 audio)";
 //Attivazione del bot
 const bot = new Bot(token, { polling: true });
 
 //Codice del bot
 bot.on("message", (msg) => {
     //Pulsanti per BusiAudio
-	var opts = {
-		reply_markup: {
-			inline_keyboard: [
-				[{ text: 'Pagina 1', callback_data: '1' }],
-				[{ text: 'Pagina 2', callback_data: '2' }],
+    var opts = {
+        reply_markup: {
+            inline_keyboard: [
+                [{ text: 'Pagina 1', callback_data: '1' }],
+                [{ text: 'Pagina 2', callback_data: '2' }],
                 [{ text: 'Pagina 3', callback_data: '3' }],
                 [{ text: 'Pagina 4', callback_data: '4' }]
-			]
-		}
+            ]
+        }
     };
     //Risposte ai trigger
     if (msg.text.toString().toLowerCase().indexOf(trigger1) === 0)
@@ -130,31 +130,31 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(trigger4) === 0)
         bot.sendMessage(msg.chat.id, "MERJAAA VAI FUORI DALLA PORTAAAAAH!");
     if (msg.text.toString().toLowerCase().indexOf(trigger5) === 0)
-        bot.sendMessage(msg.chat.id, businfo_text, {parse_mode: "HTML"});
+        bot.sendMessage(msg.chat.id, businfo_text, { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger6) === 0)
-        bot.sendMessage(msg.chat.id, "Trigger del Busi\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <qualsiasi cosa>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani");
+        bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <qualsiasi cosa>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger7) === 0)
         bot.sendMessage(msg.chat.id, "CHI È QUESTO? AH È GUERAAAAAAH!");
     if (msg.text.toString().toLowerCase().indexOf(trigger8) === 0)
-        bot.sendMessage(msg.chat.id, "<a href=\"https://i.ytimg.com/vi/q2l06PW6Uts/maxresdefault.jpg/\">LE TIGRI SOFFRONOOOOH!</a>", {parse_mode: "HTML"});
+        bot.sendMessage(msg.chat.id, "<a href=\"https://i.ytimg.com/vi/q2l06PW6Uts/maxresdefault.jpg/\">LE TIGRI SOFFRONOOOOH!</a>", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger10) === 0)
         bot.sendMessage(msg.chat.id, "SEI BELLABONA?");
     if (msg.text.toString().toLowerCase().indexOf(trigger11) === 0)
-        bot.sendMessage(msg.chat.id, "Dire 'salute' quando si StErNutA è buona educazione, ma in alcuni casi, come nella 2IE, disturba la lezione, quindi non si dice, PENA... L'INFERNOOOOOOH! CI SIAMO CAPITIIIIH?");
+        bot.sendMessage(msg.chat.id, "Dire 'salute' quando si STERNUTA è buona educazione, ma in alcuni casi, come nella 2IE, disturba la lezione, quindi non si dice, PENA... L'INFERNOOOOOOH! CI SIAMO CAPITIIIIH?");
     if (msg.text.toString().toLowerCase().indexOf(trigger12) === 0)
         bot.sendMessage(msg.chat.id, "IL PUNTO Z È ALL'INFINITOOOH!");
     if (msg.text.toString().toLowerCase().indexOf(trigger13) === 0)
-        bot.sendMessage(msg.chat.id, "<a href=\"http://www.paesaggioveneto.it/\">Paesaggio Veneto - Un'idea di Renato Busata</a>", {parse_mode: "HTML"});
+        bot.sendMessage(msg.chat.id, "<a href=\"http://www.paesaggioveneto.it/\">Paesaggio Veneto - Un'idea di Renato Busata</a>", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger14) === 0)
         bot.sendMessage(msg.chat.id, "Le farfalle fanno AAAAAHHHHHH!");
     if (msg.text.toString().toLowerCase().indexOf(trigger15) === 0)
-        bot.sendMessage(msg.chat.id, "Renato Busata si laurea in architettura presso l'Istituto Universitario di Architettura di Venezia nel 1983. Dal 1989 è docente di disegno presso istituti e licei padovani. Tra le varie pubblicazioni si segnalano 'Testimonianze storiche e artistiche', edito dal Comune di Rubano; 'Piccolo manuale per affrontare un progetto di architettura' di Gangemi Editore, con l'introduzione di Franco Purini e Luigi Monetti; 'Architetture tra Roma e Milano nel secondo dopoguerra', Ed. Libreria Progetto. Nel 2006 è dottore di ricerca in Composizione architettonica presso l'Università IUAV di Venezia.");
+        bot.sendMessage(msg.chat.id, "<b>Renato Busata</b> si laurea in architettura presso l'Istituto Universitario di Architettura di Venezia nel 1983. Dal 1989 è docente di disegno presso istituti e licei padovani. Tra le varie pubblicazioni si segnalano 'Testimonianze storiche e artistiche', edito dal Comune di Rubano; 'Piccolo manuale per affrontare un progetto di architettura' di Gangemi Editore, con l'introduzione di Franco Purini e Luigi Monetti; 'Architetture tra Roma e Milano nel secondo dopoguerra', Ed. Libreria Progetto. Nel 2006 è dottore di ricerca in Composizione architettonica presso l'Università IUAV di Venezia.", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger16) === 0)
-        bot.sendMessage(msg.chat.id, "DUEEEEEEEEEE!");	
+        bot.sendMessage(msg.chat.id, "DUEEEEEEEEEE!");
     if (msg.text.toString().toLowerCase().indexOf(trigger18) === 0)
         bot.sendMessage(msg.chat.id, "VAI VIAAAAAAAAH!");
     if (msg.text.toString().indexOf(trigger19) === 0)
-	    bot.sendMessage(msg.chat.id, 'BusiAudio - Seleziona la pagina', opts);
+        bot.sendMessage(msg.chat.id, '<b>BusiAudio - Seleziona la pagina</b>', { parse_mode: "HTML" }, opts);
     if (msg.text.toString().toLowerCase().indexOf(trigger20) === 0)
         bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/CujnZBJRaRS9.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger21) === 0)
@@ -186,9 +186,9 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(trigger33) === 0)
         bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/EZj0Kk3pzC34.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger34) === 0)
-        bot.sendMessage(msg.chat.id, "<a href=\"https://t1.ea.ltmcdn.com/it/images/5/2/4/img_il_cane_procione_come_animale_domestico_1425_paso_0_600.jpg/\">I CANI PROCIONI SOFFRONOOOOH!</a>", {parse_mode: "HTML"});
+        bot.sendMessage(msg.chat.id, "<a href=\"https://t1.ea.ltmcdn.com/it/images/5/2/4/img_il_cane_procione_come_animale_domestico_1425_paso_0_600.jpg/\">I CANI PROCIONI SOFFRONOOOOH!</a>", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger35) === 0)
-        bot.sendMessage(msg.chat.id, "<a href=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Mink_coat_lunaraine.jpg/275px-Mink_coat_lunaraine.jpg/\">NON COMPRATE I CAPPOTTI CON LE PELLICCIE CHE VI PORTATE DIETRO LA SOFFERENZA DEGLI ANIMALIIIIIH!</a>", {parse_mode: "HTML"});
+        bot.sendMessage(msg.chat.id, "<a href=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Mink_coat_lunaraine.jpg/275px-Mink_coat_lunaraine.jpg/\">NON COMPRATE I CAPPOTTI CON LE PELLICCIE CHE VI PORTATE DIETRO LA SOFFERENZA DEGLI ANIMALIIIIIH!</a>", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger36) === 0)
 	    bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/bNUb7iOEMkMn.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger37) === 0)
@@ -211,18 +211,18 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(trigger44) === 0)
 	    bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/UWhCnzcJps7h.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger45) === 0)
-	    bot.sendMessage(msg.chat.id, "Lista foto del Busi\nTigre, Cane procione, Pelliccia, Oh no, Non sono parallele, Busecs, Busecs2, Triggered");
+        bot.sendMessage(msg.chat.id, "<b>Lista foto del Busi</b>\nTigre, Cane procione, Pelliccia, Oh no, Non sono parallele, Busecs, Busecs2, Triggered", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger46) === 0)
-	    bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/wrQSmPlj55IH.jpg/\">Oh no, non sono parallele...</a>", {parse_mode: "HTML"});
+	    bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/wrQSmPlj55IH.jpg/\">Oh no, non sono parallele...</a>", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger47) === 0)
-	    bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/YJa8N__BT0E4.jpg/\">NON SONO PARALLELEEEEEEEEH!</a>", {parse_mode: "HTML"});
+	    bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/YJa8N__BT0E4.jpg/\">NON SONO PARALLELEEEEEEEEH!</a>", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger48) === 0)
 	    if (msg.text.toString().toLowerCase().indexOf(trigger49) === 0)
-            bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/NagriUpAqytQ.jpg/\">BUONGIORNOH!</a>", {parse_mode: "HTML"});
+            bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/NagriUpAqytQ.jpg/\">BUONGIORNOH!</a>", { parse_mode: "HTML" });
         else
-	        bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/K5wZ-5klUlCz.jpg/\">DUEEEEH!</a>", {parse_mode: "HTML"});
+	        bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/K5wZ-5klUlCz.jpg/\">DUEEEEH!</a>", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger50) === 0)
-	    bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/E_FJlFM2gc0a.jpg/\">NON SI SPRECA LA CARTAAAAAH!</a>", {parse_mode: "HTML"});
+	    bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/E_FJlFM2gc0a.jpg/\">NON SI SPRECA LA CARTAAAAAH!</a>", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger51) === 0)
 	    if (msg.text.toString().toLowerCase().indexOf(trigger52) === 0)
 	        bot.sendMessage(msg.chat.id, "CHI È STO QUA? HO SENTITO UN CAGNOLINO PRECEDUTO DA QUALCOS'ALTROOOH!");
@@ -251,7 +251,7 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(trigger64) === 0)
 	    bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/nwVgAgxNtgUC.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger65) === 0)
-	    bot.sendMessage(msg.chat.id, "<a href=\"https://it-it.facebook.com/pages/biz/community/Animalismo-a-scuola-169759173228670/\">ANDATE A VEDERE I MIEI POST SU ANIMALISMO A SCUOLA CHE VI INTERROGOOOOH!</a>", {parse_mode: "HTML"});
+	    bot.sendMessage(msg.chat.id, "<a href=\"https://it-it.facebook.com/pages/biz/community/Animalismo-a-scuola-169759173228670/\">ANDATE A VEDERE I MIEI POST SU ANIMALISMO A SCUOLA CHE VI INTERROGOOOOH!</a>", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger66) === 0)
 	    bot.sendMessage(msg.chat.id, "NON COMPRATE I CAPPOTTI CON LE PELLICCE DI MURMANSKI, PERCHÉ I CINESI FANNO SOFFRIRE I CANIIIIH!");
     if (msg.text.toString().toLowerCase().indexOf(trigger70) === 0)
@@ -325,22 +325,22 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 
 	//Lista audio pagina 1
 	if (action === '1') {
-		text = 'BusiAudio - Pagina 1\nAutoCAD, Brutto sto qua, Busata è un sapiente, Busirena, Compassione, Due, Gomma, Hai capito, Busi16, Insolente, Nirvana lento, Nirvana, Norvegia, Ti caccio via, Violenza privata, Palazzo, Facebook, Cosmo, Orco, Orco2';
+        text = '<b>BusiAudio - Pagina 1</b>\nAutoCAD, Brutto sto qua, Busata è un sapiente, Busirena, Compassione, Due, Gomma, Hai capito, Busi16, Insolente, Nirvana lento, Nirvana, Norvegia, Ti caccio via, Violenza privata, Palazzo, Facebook, Cosmo, Orco, Orco2', { parse_mode: "HTML" };
     }
 
     //Lista audio pagina 2
 	if (action === '2') {
-		text = "BusiAudio - Pagina 2\nChe schifo, BusiAcuto, Marchesin, Viva la rivoluzione, Bassi, Benvegnù, Cacciato via, Guerra, Marchesin vai via, Carta stracciata, Mi avete stufato, Vedovato traffica, Terrapiattisti, Orari, Povero Guerra, Moro, Macchine, Falasco, Busi bestemmia, Merja fa andare Busi all'inferno";
+        text = "<b>BusiAudio - Pagina 2</b>\nChe schifo, BusiAcuto, Marchesin, Viva la rivoluzione, Bassi, Benvegnù, Cacciato via, Guerra, Marchesin vai via, Carta stracciata, Mi avete stufato, Vedovato traffica, Terrapiattisti, Orari, Povero Guerra, Moro, Macchine, Falasco, Busi bestemmia, Merja fa andare Busi all'inferno", { parse_mode: "HTML" };
     }
 
     //Lista audio pagina 3
 	if (action === '3') {
-		text = "BusiAudio - Pagina 3\nDevo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti";
+        text = "<b>BusiAudio - Pagina 3</b>\nDevo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti", { parse_mode: "HTML" };
     }
 
     //Lista audio pagina 4
     if (action === '4') {
-        text = "BusiAudio - Pagina 4\nMetto 2 subito, Porta la cartellina";
+        text = "<b>BusiAudio - Pagina 4</b>\nMetto 2 subito, Porta la cartellina", { parse_mode: "HTML" };
     }
 
     //Visualizzazione dei pulsanti anche dopo l'attivazione
