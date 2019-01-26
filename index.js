@@ -325,22 +325,22 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 
 	//Lista audio pagina 1
 	if (action === '1') {
-        text = '<b>BusiAudio - Pagina 1</b>\nAutoCAD, Brutto sto qua, Busata è un sapiente, Busirena, Compassione, Due, Gomma, Hai capito, Busi16, Insolente, Nirvana lento, Nirvana, Norvegia, Ti caccio via, Violenza privata, Palazzo, Facebook, Cosmo, Orco, Orco2', { parse_mode: "HTML" };
+        text = 'BusiAudio - Pagina 1\nAutoCAD, Brutto sto qua, Busata è un sapiente, Busirena, Compassione, Due, Gomma, Hai capito, Busi16, Insolente, Nirvana lento, Nirvana, Norvegia, Ti caccio via, Violenza privata, Palazzo, Facebook, Cosmo, Orco, Orco2';
     }
 
     //Lista audio pagina 2
 	if (action === '2') {
-        text = "<b>BusiAudio - Pagina 2</b>\nChe schifo, BusiAcuto, Marchesin, Viva la rivoluzione, Bassi, Benvegnù, Cacciato via, Guerra, Marchesin vai via, Carta stracciata, Mi avete stufato, Vedovato traffica, Terrapiattisti, Orari, Povero Guerra, Moro, Macchine, Falasco, Busi bestemmia, Merja fa andare Busi all'inferno", { parse_mode: "HTML" };
+        text = "BusiAudio - Pagina 2\nChe schifo, BusiAcuto, Marchesin, Viva la rivoluzione, Bassi, Benvegnù, Cacciato via, Guerra, Marchesin vai via, Carta stracciata, Mi avete stufato, Vedovato traffica, Terrapiattisti, Orari, Povero Guerra, Moro, Macchine, Falasco, Busi bestemmia, Merja fa andare Busi all'inferno";
     }
 
     //Lista audio pagina 3
 	if (action === '3') {
-        text = "<b>BusiAudio - Pagina 3</b>\nDevo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti", { parse_mode: "HTML" };
+        text = "BusiAudio - Pagina 3\nDevo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti";
     }
 
     //Lista audio pagina 4
     if (action === '4') {
-        text = "<b>BusiAudio - Pagina 4</b>\nMetto 2 subito, Porta la cartellina", { parse_mode: "HTML" };
+        text = "BusiAudio - Pagina 4\nMetto 2 subito, Porta la cartellina";
     }
 
     //Visualizzazione dei pulsanti anche dopo l'attivazione
