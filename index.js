@@ -103,7 +103,7 @@ const trigger96 = "si diventa deficienti";
 const trigger97 = "metto 2 subito";
 const trigger98 = "porta la cartellina";
 //Testo di Businfo e /start
-const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <b>1.6.4 Beta 2</b> del 26/1/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 93 (23 parole, 8 foto e 62 audio)";
+const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <b>1.6.5 Beta 1</b> del 26/1/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 93 (23 parole, 8 foto e 62 audio)";
 //Attivazione del bot
 const bot = new Bot(token, { polling: true });
 
@@ -154,7 +154,7 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(trigger18) === 0)
         bot.sendMessage(msg.chat.id, "VAI VIAAAAAAAAH!");
     if (msg.text.toString().indexOf(trigger19) === 0)
-        bot.sendMessage(msg.chat.id, '<b>BusiAudio - Seleziona la pagina</b>', { parse_mode: "HTML" }, opts);
+        bot.sendMessage(msg.chat.id, 'BusiAudio - Seleziona la pagina', opts);
     if (msg.text.toString().toLowerCase().indexOf(trigger20) === 0)
         bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/CujnZBJRaRS9.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger21) === 0)
