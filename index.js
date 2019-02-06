@@ -102,8 +102,10 @@ const trigger95 = "basta battere";
 const trigger96 = "si diventa deficienti";
 const trigger97 = "metto 2 subito";
 const trigger98 = "porta la cartellina";
+const trigger99 = "liliana segre";
+
 //Testo di Businfo e /start
-const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <b>1.6.5 Beta 3</b> del 26/1/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 93 (23 parole, 8 foto e 62 audio)";
+const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <b>1.6.6 Beta 1</b> del 6/2/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 94 (24 parole, 8 foto e 62 audio)";
 //Attivazione del bot
 const bot = new Bot(token, { polling: true });
 
@@ -132,7 +134,7 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(trigger5) === 0)
         bot.sendMessage(msg.chat.id, businfo_text, { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger6) === 0)
-        bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <qualsiasi cosa>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani", { parse_mode: "HTML" });
+        bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <code>qualsiasi cosa</code>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger7) === 0)
         bot.sendMessage(msg.chat.id, "CHI È QUESTO? AH È GUERAAAAAAH!");
     if (msg.text.toString().toLowerCase().indexOf(trigger8) === 0)
@@ -154,7 +156,7 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(trigger18) === 0)
         bot.sendMessage(msg.chat.id, "VAI VIAAAAAAAAH!");
     if (msg.text.toString().indexOf(trigger19) === 0)
-        bot.sendMessage(msg.chat.id, 'BusiAudio - Seleziona la pagina', opts);
+        bot.sendMessage(msg.chat.id, 'Lista audio del Busi\nSeleziona la pagina', opts);
     if (msg.text.toString().toLowerCase().indexOf(trigger20) === 0)
         bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/CujnZBJRaRS9.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger21) === 0)
@@ -251,7 +253,7 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(trigger64) === 0)
 	    bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/nwVgAgxNtgUC.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger65) === 0)
-	    bot.sendMessage(msg.chat.id, "<a href=\"https://it-it.facebook.com/pages/biz/community/Animalismo-a-scuola-169759173228670/\">ANDATE A VEDERE I MIEI POST SU ANIMALISMO A SCUOLA CHE VI INTERROGOOOOH!</a>", { parse_mode: "HTML" });
+	    bot.sendMessage(msg.chat.id, "<a href=\"https://it-it.facebook.com/pages/biz/community/Animalismo-a-scuola-169759173228670/\">ANDATE A VEDERE I MIEI POST SU ANIMALISMO A SCUOLA CHE VI INTEROGOOOOH!</a>", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger66) === 0)
 	    bot.sendMessage(msg.chat.id, "NON COMPRATE I CAPPOTTI CON LE PELLICCE DI MURMANSKI, PERCHÉ I CINESI FANNO SOFFRIRE I CANIIIIH!");
     if (msg.text.toString().toLowerCase().indexOf(trigger70) === 0)
@@ -315,6 +317,8 @@ bot.on("message", (msg) => {
 	    bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/9HgttDKhk5kc.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger98) === 0)
         bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/Z631CgcvNgqb.mp3");
+    if (msg.text.toString().toLowerCase().indexOf(trigger99) === 0)
+        bot.sendMessage(msg.chat.id, "LA LETTERA DI LILIANA SEGRE È INSULSA MA L'INTERVISTA HA UNA POTENZA INCREDIBILE, QUINDI ASCOLTATELA SU RAI PLAY CHE VI INTEROGOOOOH!!!");
 });
 
 //Risposta alla pressione di un pulsante su BusiAudio
@@ -325,22 +329,22 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 
 	//Lista audio pagina 1
 	if (action === '1') {
-        text = 'BusiAudio - Pagina 1\nAutoCAD, Brutto sto qua, Busata è un sapiente, Busirena, Compassione, Due, Gomma, Hai capito, Busi16, Insolente, Nirvana lento, Nirvana, Norvegia, Ti caccio via, Violenza privata, Palazzo, Facebook, Cosmo, Orco, Orco2';
+        text = 'Lista audio del Busi\nPagina 1\nAutoCAD, Brutto sto qua, Busata è un sapiente, Busirena, Compassione, Due, Gomma, Hai capito, Busi16, Insolente, Nirvana lento, Nirvana, Norvegia, Ti caccio via, Violenza privata, Palazzo, Facebook, Cosmo, Orco, Orco2';
     }
 
     //Lista audio pagina 2
 	if (action === '2') {
-        text = "BusiAudio - Pagina 2\nChe schifo, BusiAcuto, Marchesin, Viva la rivoluzione, Bassi, Benvegnù, Cacciato via, Guerra, Marchesin vai via, Carta stracciata, Mi avete stufato, Vedovato traffica, Terrapiattisti, Orari, Povero Guerra, Moro, Macchine, Falasco, Busi bestemmia, Merja fa andare Busi all'inferno";
+        text = "Lista audio del Busi\nPagina 2\nChe schifo, BusiAcuto, Marchesin, Viva la rivoluzione, Bassi, Benvegnù, Cacciato via, Guerra, Marchesin vai via, Carta stracciata, Mi avete stufato, Vedovato traffica, Terrapiattisti, Orari, Povero Guerra, Moro, Macchine, Falasco, Busi bestemmia, Merja fa andare Busi all'inferno";
     }
 
     //Lista audio pagina 3
 	if (action === '3') {
-        text = "BusiAudio - Pagina 3\nDevo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti";
+        text = "Lista audio del Busi\nPagina 3\nDevo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti";
     }
 
     //Lista audio pagina 4
     if (action === '4') {
-        text = "BusiAudio - Pagina 4\nMetto 2 subito, Porta la cartellina";
+        text = "Lista audio del Busi\nPagina 4\nMetto 2 subito, Porta la cartellina";
     }
 
     //Visualizzazione dei pulsanti anche dopo l'attivazione
