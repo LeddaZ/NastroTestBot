@@ -103,9 +103,11 @@ const trigger96 = "si diventa deficienti";
 const trigger97 = "metto 2 subito";
 const trigger98 = "porta la cartellina";
 const trigger99 = "liliana segre";
+const trigger100 = "merja bocciato";
+const trigger101 = "vedovato è un poeta";
 
 //Testo di Businfo e /start
-const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <b>1.6.6 Beta 1</b> del 6/2/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 94 (24 parole, 8 foto e 62 audio)";
+const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <b>1.6.6 Beta 2</b> dell'8/2/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 96 (24 parole, 8 foto e 64 audio)";
 //Attivazione del bot
 const bot = new Bot(token, { polling: true });
 
@@ -136,7 +138,10 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(trigger6) === 0)
         bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <code>qualsiasi cosa</code>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger7) === 0)
-        bot.sendMessage(msg.chat.id, "CHI È QUESTO? AH È GUERAAAAAAH!");
+        if (msg.text.toString().toLowerCase().indexOf(trigger100) === 0)
+            bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/xYqnRB_VmHcP.mp3");
+        else
+            bot.sendMessage(msg.chat.id, "CHI È QUESTO? AH È GUERAAAAAAH!");
     if (msg.text.toString().toLowerCase().indexOf(trigger8) === 0)
         bot.sendMessage(msg.chat.id, "<a href=\"https://i.ytimg.com/vi/q2l06PW6Uts/maxresdefault.jpg/\">LE TIGRI SOFFRONOOOOH!</a>", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger10) === 0)
@@ -279,6 +284,8 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(trigger80) === 0)
         if (msg.text.toString().toLowerCase().indexOf(trigger60) === 0)
             bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/rYz_zqeMxbea.mp3");
+        else if (msg.text.toString().toLowerCase().indexOf(trigger101) === 0)
+            bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/QOMX04E_5Ojz.mp3");
         else
 	        bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/x68Lmdlf3Tct.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger81) === 0)
@@ -344,7 +351,7 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 
     //Lista audio pagina 4
     if (action === '4') {
-        text = "Lista audio del Busi\nPagina 4\nMetto 2 subito, Porta la cartellina";
+        text = "Lista audio del Busi\nPagina 4\nMetto 2 subito, Porta la cartellina, Merja bocciato, Vedovato è un poeta";
     }
 
     //Visualizzazione dei pulsanti anche dopo l'attivazione
