@@ -2,11 +2,14 @@
 //Scritto in node.js
 
 //Dichiarazione variabili
+
 //Moduli npm richiesti
 const Bot = require("node-telegram-bot-api");
 const request = require("request");
+
 //Token del bot
 const token = "664523082:AAElIGN2-7EIsLyN1M0AWc0dGCnork8piNA";
+
 //Trigger
 const trigger1 = "loddo";
 const trigger2 = "buongiorno";
@@ -107,12 +110,14 @@ const trigger100 = "merja bocciato";
 const trigger101 = "vedovato è un poeta";
 
 //Testo di Businfo e /start
-const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <b>1.6.6 Beta 2</b> dell'8/2/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 96 (24 parole, 8 foto e 64 audio)";
+const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <b>1.6.7 Beta 1</b> del 10/2/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 96 (24 parole, 8 foto e 64 audio)";
+
 //Attivazione del bot
 const bot = new Bot(token, { polling: true });
 
 //Codice del bot
 bot.on("message", (msg) => {
+
     //Pulsanti per BusiAudio
     var opts = {
         reply_markup: {
@@ -124,6 +129,7 @@ bot.on("message", (msg) => {
             ]
         }
     };
+    
     //Risposte ai trigger
     if (msg.text.toString().toLowerCase().indexOf(trigger1) === 0)
         bot.sendMessage(msg.chat.id, "LODDOOOOOOOOOO!");
@@ -143,7 +149,7 @@ bot.on("message", (msg) => {
         else
             bot.sendMessage(msg.chat.id, "CHI È QUESTO? AH È GUERAAAAAAH!");
     if (msg.text.toString().toLowerCase().indexOf(trigger8) === 0)
-        bot.sendMessage(msg.chat.id, "<a href=\"https://i.ytimg.com/vi/q2l06PW6Uts/maxresdefault.jpg/\">LE TIGRI SOFFRONOOOOH!</a>", { parse_mode: "HTML" });
+        bot.sendPhoto(msg.chat.id, "https://i.ytimg.com/vi/q2l06PW6Uts/maxresdefault.jpg", { caption: "LE TIGRI SOFFRONOOOH!" });
     if (msg.text.toString().toLowerCase().indexOf(trigger10) === 0)
         bot.sendMessage(msg.chat.id, "SEI BELLABONA?");
     if (msg.text.toString().toLowerCase().indexOf(trigger11) === 0)
@@ -193,9 +199,9 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(trigger33) === 0)
         bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/EZj0Kk3pzC34.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger34) === 0)
-        bot.sendMessage(msg.chat.id, "<a href=\"https://t1.ea.ltmcdn.com/it/images/5/2/4/img_il_cane_procione_come_animale_domestico_1425_paso_0_600.jpg/\">I CANI PROCIONI SOFFRONOOOOH!</a>", { parse_mode: "HTML" });
+        bot.sendPhoto(msg.chat.id, "https://t1.ea.ltmcdn.com/it/images/5/2/4/img_il_cane_procione_come_animale_domestico_1425_paso_0_600.jpg", { caption: "I CANI PROCIONI SOFFRONOOOOH!" });
     if (msg.text.toString().toLowerCase().indexOf(trigger35) === 0)
-        bot.sendMessage(msg.chat.id, "<a href=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Mink_coat_lunaraine.jpg/275px-Mink_coat_lunaraine.jpg/\">NON COMPRATE I CAPPOTTI CON LE PELLICCIE CHE VI PORTATE DIETRO LA SOFFERENZA DEGLI ANIMALIIIIIH!</a>", { parse_mode: "HTML" });
+        bot.sendPhoto(msg.chat.id, "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Mink_coat_lunaraine.jpg/275px-Mink_coat_lunaraine.jpg", { caption: "NON COMPRATE I CAPPOTTI CON LE PELLICCIE CHE VI PORTATE DIETRO LA SOFFERENZA DEGLI ANIMALIIIIIH!" });
     if (msg.text.toString().toLowerCase().indexOf(trigger36) === 0)
 	    bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/bNUb7iOEMkMn.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger37) === 0)
@@ -220,16 +226,16 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(trigger45) === 0)
         bot.sendMessage(msg.chat.id, "<b>Lista foto del Busi</b>\nTigre, Cane procione, Pelliccia, Oh no, Non sono parallele, Busecs, Busecs2, Triggered", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger46) === 0)
-	    bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/wrQSmPlj55IH.jpg/\">Oh no, non sono parallele...</a>", { parse_mode: "HTML" });
+	    bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/wrQSmPlj55IH.jpg", { caption: "Oh no, non sono parallele..." });
     if (msg.text.toString().toLowerCase().indexOf(trigger47) === 0)
-	    bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/YJa8N__BT0E4.jpg/\">NON SONO PARALLELEEEEEEEEH!</a>", { parse_mode: "HTML" });
+	    bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/YJa8N__BT0E4.jpg", { caption: "NON SONO PARALLELEEEEEEEEH!" });
     if (msg.text.toString().toLowerCase().indexOf(trigger48) === 0)
 	    if (msg.text.toString().toLowerCase().indexOf(trigger49) === 0)
-            bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/NagriUpAqytQ.jpg/\">BUONGIORNOH!</a>", { parse_mode: "HTML" });
+            bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/NagriUpAqytQ.jpg", { caption: "BUONGIORNOH!" });
         else
-	        bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/K5wZ-5klUlCz.jpg/\">DUEEEEH!</a>", { parse_mode: "HTML" });
+	        bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/K5wZ-5klUlCz.jpg", { caption: "DUEEEEH!" });
     if (msg.text.toString().toLowerCase().indexOf(trigger50) === 0)
-	    bot.sendMessage(msg.chat.id, "<a href=\"http://deaddrop.ftp.sh/E_FJlFM2gc0a.jpg/\">NON SI SPRECA LA CARTAAAAAH!</a>", { parse_mode: "HTML" });
+	    bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/E_FJlFM2gc0a.jpg", { caption: "NON SI SPRECA LA CARTAAAAAH!" });
     if (msg.text.toString().toLowerCase().indexOf(trigger51) === 0)
 	    if (msg.text.toString().toLowerCase().indexOf(trigger52) === 0)
 	        bot.sendMessage(msg.chat.id, "CHI È STO QUA? HO SENTITO UN CAGNOLINO PRECEDUTO DA QUALCOS'ALTROOOH!");
@@ -371,4 +377,5 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
     //Modifica del messaggio per visualizzare la lista di audio
 	bot.editMessageText(text, opts);
 });
+
 //Fine del codice
