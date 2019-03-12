@@ -115,7 +115,7 @@ const trigger105 = "previo terrorismo";
 const trigger106 = "/voto";
 
 //Testo di Businfo e /start
-const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <b>1.7.0 Beta 2</b> del 10/3/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 101 (25 parole, 8 foto e 68 audio)";
+const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <b>1.7.1 Beta 1</b> del 12/3/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 101 (25 parole, 8 foto e 68 audio)";
 
 //Attivazione del bot
 const bot = new Bot(token, { polling: true });
@@ -352,8 +352,10 @@ bot.on("message", (msg) => {
         var randomnumber = Math.floor(Math.random() * 10)
         if (randomnumber === 1)
             bot.sendMessage(msg.chat.id, "QUESTO NON HA FATTO NIENTEEEEH! TI METTO UNOOO!");
+        else if (randomnumber === 0)
+            bot.sendMessage(msg.chat.id, "SIGNORI LA TAVOLA ERA IN SCADENZA UN MESE FA, CHI NON CE L'HA LA PROSSIMA VOLTA SI BECCA DUE! CI SIAMO CAPITIIIIH?!");
         else if (randomnumber === 2)
-            bot.sendMessage(msg.chat.id, "NON HAI LA TAVOLA? BENE, DUEEEH!");
+            bot.sendMessage(msg.chat.id, "NO HO QUASI FINITO ADESSO TI METTO DUEEEH!");
         else if (randomnumber === 3)
             bot.sendMessage(msg.chat.id, "QUESTI FANNO TROPPO CASINO, ADESSO TI MANDO AL POSTO E TI BECCHI TRE! RINGRAZIA I TUOI COMPAGNI!");
         else if (randomnumber === 4)
@@ -366,6 +368,8 @@ bot.on("message", (msg) => {
             bot.sendMessage(msg.chat.id, "LA TAVOLA SI PRESENTA ABBASTANZA BENE... I DISEGNI SONO GIUSTI... SETTEEH!");
         else if (randomnumber === 8)
             bot.sendMessage(msg.chat.id, "OTTO? IMPOSSIBILE, IL BUSATA NON METTE VOTI COSÌ ALTI, FATE SEMPRE DUECENTO ERRORI VOI!");
+        else if (randomnumber === 9)
+            bot.sendMessage(msg.chat.id, "ADESSO TI BECCHI QUATTRO! NON TIRATEMI FUORI LA STORIA 'EH MA AGLI ALTRI NON L'HA DETTO', FATE SEMPRE UN SACCO DI ERRORI E AL BUSATA NE SFUGGE QUALCUNO!")
 });
 
 //Risposta alla pressione di un pulsante su BusiAudio
