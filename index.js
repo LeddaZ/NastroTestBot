@@ -113,9 +113,11 @@ const trigger103 = "ciuccia il t";
 const trigger104 = "il filo";
 const trigger105 = "previo terrorismo";
 const trigger106 = "/voto";
+const trigger107 = "busi è perfido"
+const trigger108 = "orco can"
 
 //Testo di Businfo e /start
-const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <b>1.7.1 Beta 1</b> del 12/3/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 101 (25 parole, 8 foto e 68 audio)";
+const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <b>1.7.1 Beta 2</b> del 13/3/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 103 (25 parole, 8 foto e 70 audio)";
 
 //Attivazione del bot
 const bot = new Bot(token, { polling: true });
@@ -218,7 +220,7 @@ bot.on("message", (msg) => {
 	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/0GA2Xeg9sRd5.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger39) === 0)
 	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/90d2gas3dwQa.mp3");
-    if (msg.text.toString().toLowerCase().indexOf(trigger40) === 0)
+    if (msg.text.toString().toLowerCase(trigger40) === 0)
 	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/EcF4bCUdfWiL.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger41) === 0)
 	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/qIdbEkxljQHX.mp3");
@@ -350,26 +352,32 @@ bot.on("message", (msg) => {
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/hYPu-2IQFFqH.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger106) === 0)
         var randomnumber = Math.floor(Math.random() * 10)
-        if (randomnumber === 1)
-            bot.sendMessage(msg.chat.id, "QUESTO NON HA FATTO NIENTEEEEH! TI METTO UNOOO!");
-        else if (randomnumber === 0)
-            bot.sendMessage(msg.chat.id, "SIGNORI LA TAVOLA ERA IN SCADENZA UN MESE FA, CHI NON CE L'HA LA PROSSIMA VOLTA SI BECCA DUE! CI SIAMO CAPITIIIIH?!");
-        else if (randomnumber === 2)
-            bot.sendMessage(msg.chat.id, "NO HO QUASI FINITO ADESSO TI METTO DUEEEH!");
-        else if (randomnumber === 3)
-            bot.sendMessage(msg.chat.id, "QUESTI FANNO TROPPO CASINO, ADESSO TI MANDO AL POSTO E TI BECCHI TRE! RINGRAZIA I TUOI COMPAGNI!");
-        else if (randomnumber === 4)
-            bot.sendMessage(msg.chat.id, "QUA È TUTTO SBAGLIATOOH! AH MI SONO STUFATO DI RIPETERE SEMPRE LE STESSE COSE, ADESSO TI BECCHI QUATTRO E TE LO TIENI! SEMPRE COSÌ CON VOI!");
-        else if (randomnumber === 5)
-            bot.sendMessage(msg.chat.id, "QUESTA LINEA È STORTAAAH! FAI I SEGNI PIÙ OMOGENEIIIIH! CINQUEEEH!");
-        else if (randomnumber === 6)
-            bot.sendMessage(msg.chat.id, "AH GUARDA TI METTO SEI REGALATOOOH! CHI È CHE TIENE LA CONTABILITÀ DEI VOTI? SCRIVI BASTA SEIIIH!");
-        else if (randomnumber === 7)
-            bot.sendMessage(msg.chat.id, "LA TAVOLA SI PRESENTA ABBASTANZA BENE... I DISEGNI SONO GIUSTI... SETTEEH!");
-        else if (randomnumber === 8)
-            bot.sendMessage(msg.chat.id, "OTTO? IMPOSSIBILE, IL BUSATA NON METTE VOTI COSÌ ALTI, FATE SEMPRE DUECENTO ERRORI VOI!");
-        else if (randomnumber === 9)
-            bot.sendMessage(msg.chat.id, "ADESSO TI BECCHI QUATTRO! NON TIRATEMI FUORI LA STORIA 'EH MA AGLI ALTRI NON L'HA DETTO', FATE SEMPRE UN SACCO DI ERRORI E AL BUSATA NE SFUGGE QUALCUNO!")
+    if (randomnumber === 1)
+        bot.sendMessage(msg.chat.id, "QUESTO NON HA FATTO NIENTEEEEH! TI METTO UNOOO!");
+    else if (randomnumber === 0)
+        bot.sendMessage(msg.chat.id, "SIGNORI LA TAVOLA ERA IN SCADENZA UN MESE FA, CHI NON CE L'HA LA PROSSIMA VOLTA SI BECCA DUE! CI SIAMO CAPITIIIIH?!");
+    else if (randomnumber === 2)
+        bot.sendMessage(msg.chat.id, "NO HO QUASI FINITO ADESSO TI METTO DUEEEH!");
+    else if (randomnumber === 3)
+        bot.sendMessage(msg.chat.id, "QUESTI FANNO TROPPO CASINO, ADESSO TI MANDO AL POSTO E TI BECCHI TRE! RINGRAZIA I TUOI COMPAGNI!");
+    else if (randomnumber === 4)
+        bot.sendMessage(msg.chat.id, "QUA È TUTTO SBAGLIATOOH! AH MI SONO STUFATO DI RIPETERE SEMPRE LE STESSE COSE, ADESSO TI BECCHI QUATTRO E TE LO TIENI! SEMPRE COSÌ CON VOI!");
+    else if (randomnumber === 5)
+        bot.sendMessage(msg.chat.id, "QUESTA LINEA È STORTAAAH! FAI I SEGNI PIÙ OMOGENEIIIIH! CINQUEEEH!");
+    else if (randomnumber === 6)
+        bot.sendMessage(msg.chat.id, "AH GUARDA TI METTO SEI REGALATOOOH! CHI È CHE TIENE LA CONTABILITÀ DEI VOTI? SCRIVI BASTA SEIIIH!");
+    else if (randomnumber === 7)
+        bot.sendMessage(msg.chat.id, "LA TAVOLA SI PRESENTA ABBASTANZA BENE... I DISEGNI SONO GIUSTI... SETTEEH!");
+    else if (randomnumber === 8)
+        bot.sendMessage(msg.chat.id, "OTTO? IMPOSSIBILE, IL BUSATA NON METTE VOTI COSÌ ALTI, FATE SEMPRE DUECENTO ERRORI VOI!");
+    else if (randomnumber === 9)
+        bot.sendMessage(msg.chat.id, "ADESSO TI BECCHI QUATTRO! NON TIRATEMI FUORI LA STORIA 'EH MA AGLI ALTRI NON L'HA DETTO', FATE SEMPRE UN SACCO DI ERRORI E AL BUSATA NE SFUGGE QUALCUNO!");
+    else if (randomnumber === 10)
+        bot.sendMessage(msg.chat.id, "QUESTO DISEGNO È SBAGLIATO DAL FONDOOOH! METTO CINQUE INVECE DI TRE PERCHÉ CI HAI LAVORATO!");
+    if (msg.text.toString().toLowerCase().indexOf(trigger107) === 0)
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/wAI8xEGIjEgl.mp3");
+    if (msg.text.toString().toLowerCase().indexOf(trigger108) === 0)
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/TaVCIJF-hx8K.mp3");
 });
 
 //Risposta alla pressione di un pulsante su BusiAudio
@@ -395,7 +403,7 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 
     //Lista audio pagina 4
     if (action === '4') {
-        text = "Lista audio del Busi\nPagina 4\nMetto 2 subito, Porta la cartellina, Merja bocciato, Vedovato è un poeta, Busata perde tutto, Ciuccia il tè, Il filo, Previo terrorismo";
+        text = "Lista audio del Busi\nPagina 4\nMetto 2 subito, Porta la cartellina, Merja bocciato, Vedovato è un poeta, Busata perde tutto, Ciuccia il tè, Il filo, Previo terrorismo, Busi è perfido, Orco can";
     }
 
     //Visualizzazione dei pulsanti anche dopo l'attivazione
