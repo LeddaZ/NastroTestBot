@@ -385,6 +385,8 @@ bot.on("message", (msg) => {
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/bwjA4pNQtn_D.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger110) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/XPcgiFJ63me6.mp3");
+    if (msg.text.toString().toLowerCase().indexOf(trigger111) === 0)
+        bot.sendMessage("EH UNA VOLTA FACEVAMO 120 TAVOLE ALL'ANNOOOH!");
 });
 
 //Risposta alla pressione di un pulsante su BusiAudio
