@@ -118,9 +118,10 @@ const trigger108 = "orco can"
 const trigger109 = "calma assoluta"
 const trigger110 = "rivoluzionario"
 const trigger111 = "120 tavole"
+const trigger112 = "cattivo"
 
 //Testo di Businfo e /start
-const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <b>1.7.3 Beta 1</b> del 3/4/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 106 (26 parole, 8 foto e 72 audio)";
+const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <b>1.7.3 Beta 2</b> dell'1/5/2019\nDigita <b>BusiTrigger</b> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroAdesivoBot/\">Codice del bot su GitHub</a>\nTrigger: 107 (27 parole, 8 foto e 72 audio)";
 
 //Attivazione del bot
 const bot = new Bot(token, { polling: true });
@@ -387,6 +388,8 @@ bot.on("message", (msg) => {
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/XPcgiFJ63me6.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger111) === 0)
         bot.sendMessage(msg.chat.id, "EH UNA VOLTA FACEVAMO 120 TAVOLE ALL'ANNOOOH!");
+	if (msg.text.toString().toLowerCase().indexOf(trigger112) === 0)
+        bot.sendMessage(msg.chat.id, "IL BUSATA È CATTIVOOOOOH!");
 });
 
 //Risposta alla pressione di un pulsante su BusiAudio
