@@ -1,6 +1,6 @@
 {
   "name": "NastroTestBot",
-  "version": "1.7.4b",
+  "version": "1.8.0b",
   "description": "Il bot del Busata",
   "main": "index.js",
   "dependencies": {
