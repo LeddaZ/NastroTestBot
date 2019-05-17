@@ -1,5 +1,6 @@
 //Il Busata by @LeddaZ
-//Scritto in node.js
+//Scritto in node.js con https://github.com/yagop/node-telegram-bot-api
+//Codice della versione beta
 
 //Dichiarazione variabili
 
@@ -71,7 +72,6 @@ const trigger58 = "carta stracciata";
 const trigger59 = "mi avete stufato";
 const trigger60 = "vedovato traffica";
 const trigger61 = "straccia la carta";
-const trigger62 = "/start";
 const trigger63 = "non ho capito";
 const trigger64 = "orari"
 const trigger65 = "animalismo a scuola";
@@ -112,7 +112,6 @@ const trigger102 = "busata perde tutto";
 const trigger103 = "ciuccia il t";
 const trigger104 = "il filo";
 const trigger105 = "previo terrorismo";
-const trigger106 = "/voto";
 const trigger107 = "busi è perfido"
 const trigger108 = "orco can"
 const trigger109 = "calma assoluta"
@@ -120,17 +119,15 @@ const trigger110 = "rivoluzionario"
 const trigger111 = "120 tavole"
 const trigger112 = "cattivo"
 const trigger113 = "busasci"
-const trigger114 = "/nota"
 const trigger115 = "paperette"
 
 //Testo di Businfo e /start
-const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>1.8.0 Beta 2</code> dell'11/5/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n110 trigger (30 parole, 8 foto e 72 audio)";
+const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>1.9.0 Beta</code> del 17/5/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n110 trigger (29 parole, 3 comandi, 8 foto e 72 audio)";
 
 //Attivazione del bot
 const bot = new Bot(token, { polling: true });
 
 //Codice del bot
-
 bot.on("message", (msg) => {
 
     //Pulsanti per BusiAudio
@@ -272,8 +269,6 @@ bot.on("message", (msg) => {
 	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/rYz_zqeMxbea.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger61) === 0)
 	    bot.sendMessage(msg.chat.id, "L'ALUNNO STRACCIA, DISTRUGGE, FA A PEZZETTI LA TAVOLA DI DISEGNOOOH!\nTI VA DI LUSSO MERJA, DI SOLITO PER QUESTE COSE METTO NOTA SUL REGISTROOOOOOH!");
-    if (msg.text.toString().toLowerCase().indexOf(trigger62) === 0)
-	    bot.sendMessage(msg.chat.id, businfo_text, {parse_mode: "HTML"});
     if (msg.text.toString().toLowerCase().indexOf(trigger63) === 0)
 	    bot.sendMessage(msg.chat.id, "EEH TI ARRANGI NON È POSSIBILE CHE DEVO SEMPRE SPIEGARE LE STESSE COSEEEH!");
     if (msg.text.toString().toLowerCase().indexOf(trigger64) === 0)
@@ -355,8 +350,30 @@ bot.on("message", (msg) => {
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/8TOZ8fMLQ3Tc.mp3");
     if (msg.text.toString().toLowerCase().indexOf(trigger105) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/hYPu-2IQFFqH.mp3");
-    if (msg.text.toString().toLowerCase().indexOf(trigger106) === 0)
-        var voto = Math.floor(Math.random()*(10-0+1)+0)
+    if (msg.text.toString().toLowerCase().indexOf(trigger107) === 0)
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/wAI8xEGIjEgl.mp3");
+    if (msg.text.toString().toLowerCase().indexOf(trigger108) === 0)
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/TaVCIJF-hx8K.mp3");
+    if (msg.text.toString().toLowerCase().indexOf(trigger109) === 0)
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/bwjA4pNQtn_D.mp3");
+    if (msg.text.toString().toLowerCase().indexOf(trigger110) === 0)
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/XPcgiFJ63me6.mp3");
+    if (msg.text.toString().toLowerCase().indexOf(trigger111) === 0)
+        bot.sendMessage(msg.chat.id, "EH UNA VOLTA FACEVAMO 120 TAVOLE ALL'ANNOOOH!");
+	if (msg.text.toString().toLowerCase().indexOf(trigger112) === 0)
+        bot.sendMessage(msg.chat.id, "IL BUSATA È CATTIVOOOOOH!");
+	if (msg.text.toString().toLowerCase().indexOf(trigger113) === 0)
+        bot.sendMessage(msg.chat.id, "<code>|||||||||||||||\n|||||||||||||||\nDUEDUEDUEDU||||\nEDUEDUEDUED||||\n|||||||||||||||\n|||||||||||||||\n||||UEDUEDUEDUE\n||||DUEDUEDUEDU\n|||||||||||||||\n|||||||||||||||</code>", { parse_mode: "HTML" });
+});
+
+//Visualizzazione di Businfo con /start
+bot.onText(/\/start/, (msg) => {
+	bot.sendMessage(msg.chat.id, businfo_text, { parse_mode: "HTML" });
+});
+
+//Codice di /voto
+bot.onText(/\/voto/, (msg) => {
+	var voto = Math.floor(Math.random()*(10-0+1)+0)
     if (voto === 1)
         bot.sendMessage(msg.chat.id, "QUESTO NON HA FATTO NIENTEEEEH! TI METTO UNOOO!");
     else if (voto === 0)
@@ -379,22 +396,11 @@ bot.on("message", (msg) => {
         bot.sendMessage(msg.chat.id, "ADESSO TI BECCHI QUATTRO! NON TIRATEMI FUORI LA STORIA 'EH MA AGLI ALTRI NON L'HA DETTO', FATE SEMPRE UN SACCO DI ERRORI E AL BUSATA NE SFUGGE QUALCUNO!");
     else if (voto === 10)
         bot.sendMessage(msg.chat.id, "QUESTO DISEGNO È SBAGLIATO DAL FONDOOOH! METTO CINQUE INVECE DI TRE PERCHÉ CI HAI LAVORATO!");
-    if (msg.text.toString().toLowerCase().indexOf(trigger107) === 0)
-        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/wAI8xEGIjEgl.mp3");
-    if (msg.text.toString().toLowerCase().indexOf(trigger108) === 0)
-        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/TaVCIJF-hx8K.mp3");
-    if (msg.text.toString().toLowerCase().indexOf(trigger109) === 0)
-        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/bwjA4pNQtn_D.mp3");
-    if (msg.text.toString().toLowerCase().indexOf(trigger110) === 0)
-        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/XPcgiFJ63me6.mp3");
-    if (msg.text.toString().toLowerCase().indexOf(trigger111) === 0)
-        bot.sendMessage(msg.chat.id, "EH UNA VOLTA FACEVAMO 120 TAVOLE ALL'ANNOOOH!");
-	if (msg.text.toString().toLowerCase().indexOf(trigger112) === 0)
-        bot.sendMessage(msg.chat.id, "IL BUSATA È CATTIVOOOOOH!");
-	if (msg.text.toString().toLowerCase().indexOf(trigger113) === 0)
-        bot.sendMessage(msg.chat.id, "<code>|||||||||||||||\n|||||||||||||||\nDUEDUEDUEDU||||\nEDUEDUEDUED||||\n|||||||||||||||\n|||||||||||||||\n||||UEDUEDUEDUE\n||||DUEDUEDUEDU\n|||||||||||||||\n|||||||||||||||</code>", { parse_mode: "HTML" });
-	if (msg.text.toString().toLowerCase().indexOf(trigger114) === 0)
-        var nota = Math.floor(Math.random()*(6-1+1)+1)
+});
+
+//Codice di /nota
+bot.onText(/\/nota/, (msg) => {
+	var nota = Math.floor(Math.random()*(6-1+1)+1)
     if (nota === 1)
         bot.sendMessage(msg.chat.id, msg.from.first_name + ", in laboratorio, sfoglia appunti di chimica invece di disegnare.");
     else if (nota === 2)
@@ -456,3 +462,5 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 });
 
 //Fine del codice
+
+//R. B.
