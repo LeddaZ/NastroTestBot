@@ -1,6 +1,6 @@
 {
-  "name": "NastroTestBot",
-  "version": "1.9.0b",
+  "name": "nastrotestbot",
+  "version": "1.9.0b2",
   "description": "Il bot del Busata",
   "main": "index.js",
   "dependencies": {
@@ -11,14 +11,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "@LeddaZ su Telegram",
+  "author": "@LeddaZ on Telegram",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LeddaZ/NastroAdesivoBot.git"
+    "url": "git+https://github.com/LeddaZ/NastroTestBot.git"
   },
   "bugs": {
-    "url": "https://github.com/LeddaZ/NastroAdesivoBot/issues"
+    "url": "https://github.com/LeddaZ/NastroTestBot/issues"
   },
-  "homepage": "https://github.com/LeddaZ/NastroAdesivoBot#readme"
+  "homepage": "https://github.com/LeddaZ/NastroTestBot#readme"
 }

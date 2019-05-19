@@ -120,9 +120,11 @@ const trigger111 = "120 tavole"
 const trigger112 = "cattivo"
 const trigger113 = "busasci"
 const trigger115 = "paperette"
+const trigger116 = "busiamazon"
+const trigger117 = "busicasa"
 
 //Testo di Businfo e /start
-const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>1.9.0 Beta</code> del 17/5/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n110 trigger (29 parole, 3 comandi, 8 foto e 72 audio)";
+const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>1.9.0 Beta 2</code> del 19/5/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n112 trigger (31 parole, 3 comandi, 8 foto e 72 audio)";
 
 //Attivazione del bot
 const bot = new Bot(token, { polling: true });
@@ -154,7 +156,7 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(trigger5) === 0)
         bot.sendMessage(msg.chat.id, businfo_text, { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger6) === 0)
-        bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <code>qualsiasi cosa</code>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, /voto, 120 tavole, Cattivo, Busascii, /nota, Paperette", { parse_mode: "HTML" });
+        bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <code>qualsiasi cosa</code>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, /voto, 120 tavole, Cattivo, Busascii, /nota, Paperette, BusiAmazon", { parse_mode: "HTML" });
     if (msg.text.toString().toLowerCase().indexOf(trigger7) === 0)
         if (msg.text.toString().toLowerCase().indexOf(trigger100) === 0)
             bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/xYqnRB_VmHcP.mp3");
@@ -364,6 +366,13 @@ bot.on("message", (msg) => {
         bot.sendMessage(msg.chat.id, "IL BUSATA È CATTIVOOOOOH!");
 	if (msg.text.toString().toLowerCase().indexOf(trigger113) === 0)
         bot.sendMessage(msg.chat.id, "<code>|||||||||||||||\n|||||||||||||||\nDUEDUEDUEDU||||\nEDUEDUEDUED||||\n|||||||||||||||\n|||||||||||||||\n||||UEDUEDUEDUE\n||||DUEDUEDUEDU\n|||||||||||||||\n|||||||||||||||</code>", { parse_mode: "HTML" });
+    if (msg.text.toString().toLowerCase().indexOf(trigger115) === 0)
+        bot.sendMessage(msg.chat.id, "OH! LE PAPERETTEEEH! AH LEDDA DOVREMO ISCRIVERLO A QUALCHE ASSOCIAZIONE, LUI CI TIENE A QUESTE COSEEEH!");
+    if (msg.text.toString().toLowerCase().indexOf(trigger116) === 0)
+        bot.sendMessage(msg.chat.id, "https://www.amazon.it/s?i=stripbooks&rh=p_27%3ARenato+Busata&ref=dp_byline_sr_book_1");
+    if (msg.text.toString().toLowerCase().indexOf(trigger117) === 0)
+        bot.sendLocation(msg.chat.id, 45.4244592, 11.8302266);
+        bot.sendMessage(msg.chat.id, "SE VENITE A TROVARE IL BUSATA VI CACCIA VIAAAAH!")
 });
 
 //Visualizzazione di Businfo con /start
