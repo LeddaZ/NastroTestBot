@@ -1,7 +1,7 @@
 {
   "name": "nastrotestbot",
-  "version": "1.9.0b3",
-  "description": "Il bot del Busata",
+  "version": "1.9.1b",
+  "description": "Il bot del Busata [BETA]",
   "main": "index.js",
   "dependencies": {
     "node-telegram-bot-api": "^0.30.0"
