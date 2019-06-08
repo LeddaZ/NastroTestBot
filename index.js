@@ -129,9 +129,10 @@ const t121 = "ventiquattrore"
 const t122 = "via"
 const t123 = "voti"
 const t124 = "nota"
+const t125 = "titoli"
 
 //Testo di Businfo e /start
-const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>1.9.1 Beta</code> del 6/6/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n119 trigger (33 parole, 3 comandi, 8 foto e 77 audio)";
+const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>1.9.1 Beta 2</code> dell'8/6/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n120 trigger (33 parole, 3 comandi, 8 foto e 78 audio)";
 
 //Attivazione del bot
 const bot = new Bot(token, { polling: true });
@@ -393,6 +394,8 @@ bot.on("message", (msg) => {
         bot.sendMessage(msg.chat.id, "IL PROSSIMO CHE MI CHIEDE QUANDO CAMBIO I VOTI SI BECCA DUE! LI CAMBIERÒ QUANDO SARÀ ORA!");
     if (msg.text.toString().toLowerCase().indexOf(t124) === 0)
         bot.sendMessage(msg.chat.id, "MERJAAAAA! IO AVANZO UNA NOTA DA TE!");
+    if (msg.text.toString().toLowerCase().indexOf(t125) === 0)
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/Fg1aqSnMOkW0.mp3");
 });
 
 //Visualizzazione di Businfo con /start
@@ -467,7 +470,7 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 
     //Lista audio pagina 4
     if (action === '4') {
-        text = "Lista audio del Busi\nPagina 4\nMetto 2 subito, Porta la cartellina, Merja bocciato, Vedovato è un poeta, Busata perde tutto, Ciuccia il tè, Il filo, Previo terrorismo, Busi è perfido, Orco can, Calma assoluta, Rivoluzionario, Ferragosto, Telecamera, Tigri stecchite, Ventiquattrore, Via";
+        text = "Lista audio del Busi\nPagina 4\nMetto 2 subito, Porta la cartellina, Merja bocciato, Vedovato è un poeta, Busata perde tutto, Ciuccia il tè, Il filo, Previo terrorismo, Busi è perfido, Orco can, Calma assoluta, Rivoluzionario, Ferragosto, Telecamera, Tigri stecchite, Ventiquattrore, Via, Titoli";
     }
 
     //Visualizzazione dei pulsanti anche dopo l'attivazione
