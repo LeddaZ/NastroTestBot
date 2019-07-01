@@ -10,7 +10,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "deploy": "now -e token=@TEST_TOKEN"
   },
   "author": "@LeddaZ on Telegram",
   "license": "ISC",
