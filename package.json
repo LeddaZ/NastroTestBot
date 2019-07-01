@@ -1,6 +1,6 @@
 {
   "name": "nastrotestbot",
-  "version": "1.9.2b2",
+  "version": "1.9.2b4",
   "description": "Il bot del Busata [BETA]",
   "main": "index.js",
   "dependencies": {
@@ -11,7 +11,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "deploy": "now -e token=@TEST_TOKEN"
+    "deploy": "now --dotenv=.env"
   },
   "author": "@LeddaZ on Telegram",
   "license": "ISC",
