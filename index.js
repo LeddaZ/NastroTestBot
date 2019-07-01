@@ -7,9 +7,8 @@
 //Moduli npm richiesti
 const Bot = require("node-telegram-bot-api");
 const request = require("request");
-
-//Token del bot
-const token = "664523082:AAElIGN2-7EIsLyN1M0AWc0dGCnork8piNA";
+const dotenv = require('dotenv').config()
+const token = process.env.test_token
 
 //Trigger
 const t1 = "loddo";
@@ -132,7 +131,7 @@ const t124 = "nota"
 const t125 = "titoli"
 
 //Testo di Businfo e /start
-const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>1.9.1 Beta 2</code> dell'8/6/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n120 trigger (33 parole, 3 comandi, 8 foto e 78 audio)";
+const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>1.9.2 Beta</code> dell'1/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n120 trigger (33 parole, 3 comandi, 8 foto e 78 audio)";
 
 //Attivazione del bot
 const bot = new Bot(token, { polling: true });
