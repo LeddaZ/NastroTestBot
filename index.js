@@ -5,136 +5,136 @@
 //Dichiarazione variabili
 
 //Moduli npm richiesti
-const Bot = require("node-telegram-bot-api");
-const request = require("request");
-const dotenv = require('dotenv').config();
-const token = process.env.TEST_TOKEN;
+var Bot = require("node-telegram-bot-api");
+var request = require("request");
+var dotenv = require('dotenv').config();
+var token = process.env.TEST_TOKEN;
 
 //Trigger
-const t1 = "loddo";
-const t2 = "buongiorno";
-const t3 = "non ho lo scotch";
-const t4 = "popopopo";
-const t5 = "businfo";
-const t6 = "busitrigger";
-const t7 = "merja";
-const t8 = "tigre";
-const t10 = "chi sei";
-const t11 = "salute";
-const t12 = "punto z";
-const t13 = "paesaggio veneto";
-const t14 = "farfalle";
-const t15 = "biobusi";
-const t16 = "non ho la tavola";
-const t17 = "due";
-const t18 = "ma non ho fatto niente";
-const t19 = "BusiAudio";
-const t20 = "autocad";
-const t21 = "brutto sto qua";
-const t22 = "busata è un sapiente";
-const t23 = "busirena";
-const t24 = "compassione";
-const t25 = "gomma";
-const t26 = "hai capito";
-const t27 = "busi16";
-const t28 = "insolente";
-const t29 = "nirvana lento";
-const t30 = "nirvana";
-const t31 = "norvegia";
-const t32 = "ti caccio via";
-const t33 = "violenza privata";
-const t34 = "cane procione";
-const t35 = "pelliccia";
-const t36 = "palazzo";
-const t37 = "facebook";
-const t38 = "cosmo";
-const t39 = "orco2";
-const t40 = "orco";
-const t41 = "che schifo";
-const t42 = "busiacuto";
-const t43 = "marchesin";
-const t44 = "viva la rivoluzione";
-const t45 = "busifoto";
-const t46 = "oh no";
-const t47 = "non sono parallele";
-const t48 = "busecs";
-const t49 = "busecs2";
-const t50 = "triggered";
-const t51 = "dio";
-const t52 = "dio can";
-const t53 = "bassi";
-const t54 = "benvegn";
-const t55 = "cacciato via";
-const t56 = "guerra";
-const t57 = "marchesin vai via";
-const t58 = "carta stracciata";
-const t59 = "mi avete stufato";
-const t60 = "vedovato traffica";
-const t61 = "straccia la carta";
-const t63 = "non ho capito";
-const t64 = "orari"
-const t65 = "animalismo a scuola";
-const t66 = "cani";
-const t70 = "terrapiattisti";
-const t71 = "povero guerra";
-const t72 = "moro";
-const t73 = "macchine";
-const t74 = "falasco";
-const t75 = "busi bestemmia";
-const t76 = "merja fa andare busi all'inferno";
-const t77 = "devo finire la tavola";
-const t78 = "denti";
-const t79 = "colpa di guerra";
-const t80 = "vedovato";
-const t81 = "ti tieni il 2";
-const t82 = "mister fantastico";
-const t83 = "governo";
-const t84 = "il taglio di guerra";
-const t85 = "busi va all'inferno";
-const t86 = "soddisfa il busi";
-const t87 = "andate via";
-const t88 = "merja ha le mani gi";
-const t89 = "busi è un po' tardo";
-const t90 = "guerra a 90";
-const t91 = "koreani mangiacani";
-const t92 = "ledda studia chimica";
-const t93 = "sfoglia il quaderno";
-const t94 = "stare al mondo";
-const t95 = "basta battere";
-const t96 = "si diventa deficienti";
-const t97 = "metto 2 subito";
-const t98 = "porta la cartellina";
-const t99 = "liliana segre";
-const t100 = "merja bocciato";
-const t101 = "vedovato è un poeta";
-const t102 = "busata perde tutto";
-const t103 = "ciuccia il t";
-const t104 = "il filo";
-const t105 = "previo terrorismo";
-const t107 = "busi è perfido"
-const t108 = "orco can"
-const t109 = "calma assoluta"
-const t110 = "rivoluzionario"
-const t111 = "120 tavole"
-const t112 = "cattivo"
-const t113 = "busasci"
-const t115 = "paperette"
-const t116 = "busiamazon"
-const t117 = "busicasa"
-const t118 = "ferragosto"
-const t119 = "telecamera"
-const t120 = "tigri stecchite"
-const t121 = "ventiquattrore"
-const t122 = "via"
-const t123 = "voti"
-const t124 = "nota"
-const t125 = "titoli"
+var t1 = "loddo";
+var t2 = "buongiorno";
+var t3 = "non ho lo scotch";
+var t4 = "popopopo";
+var t5 = "businfo";
+var t6 = "busitrigger";
+var t7 = "merja";
+var t8 = "tigre";
+var t10 = "chi sei";
+var t11 = "salute";
+var t12 = "punto z";
+var t13 = "paesaggio veneto";
+var t14 = "farfalle";
+var t15 = "biobusi";
+var t16 = "non ho la tavola";
+var t17 = "due";
+var t18 = "ma non ho fatto niente";
+var t19 = "BusiAudio";
+var t20 = "autocad";
+var t21 = "brutto sto qua";
+var t22 = "busata è un sapiente";
+var t23 = "busirena";
+var t24 = "compassione";
+var t25 = "gomma";
+var t26 = "hai capito";
+var t27 = "busi16";
+var t28 = "insolente";
+var t29 = "nirvana lento";
+var t30 = "nirvana";
+var t31 = "norvegia";
+var t32 = "ti caccio via";
+var t33 = "violenza privata";
+var t34 = "cane procione";
+var t35 = "pelliccia";
+var t36 = "palazzo";
+var t37 = "facebook";
+var t38 = "cosmo";
+var t39 = "orco2";
+var t40 = "orco";
+var t41 = "che schifo";
+var t42 = "busiacuto";
+var t43 = "marchesin";
+var t44 = "viva la rivoluzione";
+var t45 = "busifoto";
+var t46 = "oh no";
+var t47 = "non sono parallele";
+var t48 = "busecs";
+var t49 = "busecs2";
+var t50 = "triggered";
+var t51 = "dio";
+var t52 = "dio can";
+var t53 = "bassi";
+var t54 = "benvegn";
+var t55 = "cacciato via";
+var t56 = "guerra";
+var t57 = "marchesin vai via";
+var t58 = "carta stracciata";
+var t59 = "mi avete stufato";
+var t60 = "vedovato traffica";
+var t61 = "straccia la carta";
+var t63 = "non ho capito";
+var t64 = "orari"
+var t65 = "animalismo a scuola";
+var t66 = "cani";
+var t70 = "terrapiattisti";
+var t71 = "povero guerra";
+var t72 = "moro";
+var t73 = "macchine";
+var t74 = "falasco";
+var t75 = "busi bestemmia";
+var t76 = "merja fa andare busi all'inferno";
+var t77 = "devo finire la tavola";
+var t78 = "denti";
+var t79 = "colpa di guerra";
+var t80 = "vedovato";
+var t81 = "ti tieni il 2";
+var t82 = "mister fantastico";
+var t83 = "governo";
+var t84 = "il taglio di guerra";
+var t85 = "busi va all'inferno";
+var t86 = "soddisfa il busi";
+var t87 = "andate via";
+var t88 = "merja ha le mani gi";
+var t89 = "busi è un po' tardo";
+var t90 = "guerra a 90";
+var t91 = "koreani mangiacani";
+var t92 = "ledda studia chimica";
+var t93 = "sfoglia il quaderno";
+var t94 = "stare al mondo";
+var t95 = "basta battere";
+var t96 = "si diventa deficienti";
+var t97 = "metto 2 subito";
+var t98 = "porta la cartellina";
+var t99 = "liliana segre";
+var t100 = "merja bocciato";
+var t101 = "vedovato è un poeta";
+var t102 = "busata perde tutto";
+var t103 = "ciuccia il t";
+var t104 = "il filo";
+var t105 = "previo terrorismo";
+var t107 = "busi è perfido"
+var t108 = "orco can"
+var t109 = "calma assoluta"
+var t110 = "rivoluzionario"
+var t111 = "120 tavole"
+var t112 = "cattivo"
+var t113 = "busasci"
+var t115 = "paperette"
+var t116 = "busiamazon"
+var t117 = "busicasa"
+var t118 = "ferragosto"
+var t119 = "telecamera"
+var t120 = "tigri stecchite"
+var t121 = "ventiquattrore"
+var t122 = "via"
+var t123 = "voti"
+var t124 = "nota"
+var t125 = "titoli"
 
 //Testo di Businfo e /start
-const businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>1.9.2 Beta 5</code> dell'1/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n120 trigger (33 parole, 3 comandi, 8 foto e 78 audio)";
+var businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>2.0.0 Beta</code> del 4/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n121 trigger (33 parole, 4 comandi, 8 foto e 78 audio)";
 
 //Attivazione del bot
-const bot = new Bot(token, { polling: true });
+var bot = new Bot(token, { polling: true });
 
 //Codice del bot
 bot.on("message", (msg) => {
@@ -429,6 +429,25 @@ bot.onText(/\/voto/, (msg) => {
         bot.sendMessage(msg.chat.id, "QUESTO DISEGNO È SBAGLIATO DAL FONDOOOH! METTO CINQUE INVECE DI TRE PERCHÉ CI HAI LAVORATO!");
 });
 
+
+//Codice di /consegna
+bot.onText(/\/consegna/, (msg) => {
+
+    //Numero della tavola
+    var tav = Math.floor(Math.random()*(12-1+1)+1)
+
+    //Correzione
+    var p1 = Math.floor(Math.random()*(6-1+1)+1)
+    if (p1 === 1)
+        var text1 = "La tavola si presenta bene, in linea di massima non ci sono errori... C'è qualche imperfezione ma non è niente di grave, i segni sono omogenei. Potevi scrivere meglio...\n"
+    if (p1 === 2)
+        var text1 = "La tavola è fatta bene, non ci sono errori gravi e le scritte sono fatte bene, anche i segni sono omogenei. Potevi essere più preciso ma non è niente di grave...\n"
+    if (p1 === 3)
+        var text1 = "BRUTTO STO SEGNO! LA LINEA QUI DEV'ESSERE PARALLELA, L'HO RIPETUTO MILLE VOLTEEEH! GUARDA CHE BRUTTI STI TITOLI... L'ALTEZZA DEL CARTIGLIO È SBAGLIATA, POSSIBILE CHE NON LO ABBIATE ANCORA CAPITOOH?!\n"
+
+    bot.sendMessage(msg.chat.id, "Allora, questa è la tavola numero " + tav + "...\n" + text1)
+})
+
 //Codice di /nota
 bot.onText(/\/nota/, (msg) => {
 	var nota = Math.floor(Math.random()*(6-1+1)+1)
@@ -448,8 +467,8 @@ bot.onText(/\/nota/, (msg) => {
 
 //Risposta alla pressione di un pulsante su BusiAudio
 bot.on('callback_query', function onCallbackQuery(callbackQuery) {
-	const action = callbackQuery.data;
-	const msg = callbackQuery.message;
+	var action = callbackQuery.data;
+	var msg = callbackQuery.message;
     let text;
 
 	//Lista audio pagina 1
