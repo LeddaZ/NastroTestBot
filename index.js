@@ -131,7 +131,7 @@ var t124 = "nota"
 var t125 = "titoli"
 
 //Testo di Businfo e /start
-var businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>2.0.0 Beta</code> del 4/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n121 trigger (33 parole, 4 comandi, 8 foto e 78 audio)";
+var businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>2.0.0 Beta 2</code> del 5/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n120 trigger (33 parole, 3 comandi, 8 foto e 78 audio)";
 
 //Attivazione del bot
 var bot = new Bot(token, { polling: true });
@@ -154,281 +154,365 @@ bot.on("message", (msg) => {
     //Risposte ai trigger
     if (msg.text.toString().toLowerCase().indexOf(t1) === 0)
         bot.sendAudio(msg.chat.id, "LODDOOOOOOOOOO!");
+
     if (msg.text.toString().toLowerCase().indexOf(t2) === 0)
         bot.sendMessage(msg.chat.id, "BUONGIORNO SEDUTI! SI VA IN LABORATORIOH!");
+
     if (msg.text.toString().toLowerCase().indexOf(t3) === 0)
         bot.sendMessage(msg.chat.id, "AAAH NON HA LO SCOTCH! E IO METTO DUE E NOTA SUL REGISTROOOOOOH!");
+
     if (msg.text.toString().toLowerCase().indexOf(t4) === 0)
         bot.sendMessage(msg.chat.id, "MERJAAA VAI FUORI DALLA PORTAAAAAH!");
+
     if (msg.text.toString().toLowerCase().indexOf(t5) === 0)
         bot.sendMessage(msg.chat.id, businfo_text, { parse_mode: "HTML" });
+
     if (msg.text.toString().toLowerCase().indexOf(t6) === 0)
         bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <code>qualsiasi cosa</code>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, /voto, 120 tavole, Cattivo, Busascii, /nota, Paperette, BusiAmazon, Voti, Nota", { parse_mode: "HTML" });
+
     if (msg.text.toString().toLowerCase().indexOf(t7) === 0)
         if (msg.text.toString().toLowerCase().indexOf(t100) === 0)
             bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/xYqnRB_VmHcP.mp3");
         else
             bot.sendMessage(msg.chat.id, "CHI È QUESTO? AH È GUERAAAAAAH!");
+
     if (msg.text.toString().toLowerCase().indexOf(t8) === 0)
         bot.sendPhoto(msg.chat.id, "https://i.ytimg.com/vi/q2l06PW6Uts/maxresdefault.jpg", { caption: "LE TIGRI SOFFRONOOOH!" });
+
     if (msg.text.toString().toLowerCase().indexOf(t10) === 0)
         bot.sendMessage(msg.chat.id, "SEI BELLABONA?");
+
     if (msg.text.toString().toLowerCase().indexOf(t11) === 0)
         bot.sendMessage(msg.chat.id, "Dire 'salute' quando si stErnuta è buona educazione, ma in alcuni casi, come in 2IE, disturba la lezione, quindi non si dice, pena... L'INFERNOOOOOOH! CI SIAMO CAPITIIIIH?");
+
     if (msg.text.toString().toLowerCase().indexOf(t12) === 0)
         bot.sendMessage(msg.chat.id, "IL PUNTO Z È ALL'INFINITOOOH!");
+
     if (msg.text.toString().toLowerCase().indexOf(t13) === 0)
         bot.sendMessage(msg.chat.id, "<a href=\"http://www.paesaggioveneto.it/\">Paesaggio Veneto - Un'idea di Renato Busata</a>", { parse_mode: "HTML" });
+
     if (msg.text.toString().toLowerCase().indexOf(t14) === 0)
         bot.sendMessage(msg.chat.id, "Le farfalle fanno AAAAAHHHHHH!");
+
     if (msg.text.toString().toLowerCase().indexOf(t15) === 0)
         bot.sendMessage(msg.chat.id, "<b>Renato Busata</b> si laurea in architettura presso l'Istituto Universitario di Architettura di Venezia nel 1983. Dal 1989 è docente di disegno presso istituti e licei padovani. Tra le varie pubblicazioni si segnalano 'Testimonianze storiche e artistiche', edito dal Comune di Rubano; 'Piccolo manuale per affrontare un progetto di architettura' di Gangemi Editore, con l'introduzione di Franco Purini e Luigi Monetti; 'Architetture tra Roma e Milano nel secondo dopoguerra', Ed. Libreria Progetto. Nel 2006 è dottore di ricerca in Composizione architettonica presso l'Università IUAV di Venezia.", { parse_mode: "HTML" });
+
     if (msg.text.toString().toLowerCase().indexOf(t16) === 0)
         bot.sendMessage(msg.chat.id, "DUEEEEEEEEEE!");
+
     if (msg.text.toString().toLowerCase().indexOf(t18) === 0)
         bot.sendMessage(msg.chat.id, "VAI VIAAAAAAAAH!");
+
     if (msg.text.toString().indexOf(t19) === 0)
         bot.sendMessage(msg.chat.id, 'Lista audio del Busi\nSeleziona la pagina', opts);
+
     if (msg.text.toString().toLowerCase().indexOf(t20) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/CujnZBJRaRS9.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t21) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/ieWe74fWX_mI.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t22) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/CtKUN2Ennh95.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t23) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/_fdSsKsjKAyW.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t24) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/zXV_OyRnOoef.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t17) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/iMEJ6vF4IHh5.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t25) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/ntHniD7G8_4y.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t26) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/J4JKLnhTSP_M.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t27) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/pfMF_fKstdo0.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t28) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/d0JkpQhlhpYe.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t29) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/i2XwCaBHsCTj.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t30) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/ZVTUvo1ylD9l.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t31) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/LfJFmpMuCu2W.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t32) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/JpOZ2bW3i30n.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t33) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/EZj0Kk3pzC34.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t34) === 0)
         bot.sendPhoto(msg.chat.id, "https://t1.ea.ltmcdn.com/it/images/5/2/4/img_il_cane_procione_come_animale_domestico_1425_paso_0_600.jpg", { caption: "I CANI PROCIONI SOFFRONOOOOH!" });
+
     if (msg.text.toString().toLowerCase().indexOf(t35) === 0)
         bot.sendPhoto(msg.chat.id, "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Mink_coat_lunaraine.jpg/275px-Mink_coat_lunaraine.jpg", { caption: "NON COMPRATE I CAPPOTTI CON LE PELLICCIE CHE VI PORTATE DIETRO LA SOFFERENZA DEGLI ANIMALIIIIIH!" });
+
     if (msg.text.toString().toLowerCase().indexOf(t36) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/bNUb7iOEMkMn.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/bNUb7iOEMkMn.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t37) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/082QoWMMz_Ow.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/082QoWMMz_Ow.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t38) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/0GA2Xeg9sRd5.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/0GA2Xeg9sRd5.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t39) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/90d2gas3dwQa.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/90d2gas3dwQa.mp3");
+        
     if (msg.text.toString().toLowerCase(t40) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/EcF4bCUdfWiL.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/EcF4bCUdfWiL.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t41) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/qIdbEkxljQHX.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/qIdbEkxljQHX.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t42) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/SVMEfdg7yV2V.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/SVMEfdg7yV2V.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t43) === 0)
 	    if (msg.text.toString().toLowerCase().indexOf(t57) === 0)
 	        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/v2FGaTXnhYoA.mp3");
         else
-	        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/t2a9IJtcvqWD.mp3");
+            bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/t2a9IJtcvqWD.mp3");
+            
     if (msg.text.toString().toLowerCase().indexOf(t44) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/UWhCnzcJps7h.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/UWhCnzcJps7h.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t45) === 0)
         bot.sendMessage(msg.chat.id, "<b>Lista foto del Busi</b>\nTigre, Cane procione, Pelliccia, Oh no, Non sono parallele, Busecs, Busecs2, Triggered", { parse_mode: "HTML" });
+
     if (msg.text.toString().toLowerCase().indexOf(t46) === 0)
-	    bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/wrQSmPlj55IH.jpg", { caption: "Oh no, non sono parallele..." });
+        bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/wrQSmPlj55IH.jpg", { caption: "Oh no, non sono parallele..." });
+        
     if (msg.text.toString().toLowerCase().indexOf(t47) === 0)
-	    bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/YJa8N__BT0E4.jpg", { caption: "NON SONO PARALLELEEEEEEEEH!" });
+        bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/YJa8N__BT0E4.jpg", { caption: "NON SONO PARALLELEEEEEEEEH!" });
+        
     if (msg.text.toString().toLowerCase().indexOf(t48) === 0)
 	    if (msg.text.toString().toLowerCase().indexOf(t49) === 0)
             bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/NagriUpAqytQ.jpg", { caption: "BUONGIORNOH!" });
         else
-	        bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/K5wZ-5klUlCz.jpg", { caption: "DUEEEEH!" });
+            bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/K5wZ-5klUlCz.jpg", { caption: "DUEEEEH!" });
+            
     if (msg.text.toString().toLowerCase().indexOf(t50) === 0)
-	    bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/E_FJlFM2gc0a.jpg", { caption: "NON SI SPRECA LA CARTAAAAAH!" });
-    if (msg.text.toString().toLowerCase().indexOf(t51) === 0)
-	    if (msg.text.toString().toLowerCase().indexOf(t52) === 0)
+        bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/E_FJlFM2gc0a.jpg", { caption: "NON SI SPRECA LA CARTAAAAAH!" });
+        
+    if (msg.text.toString().toLowerCase().includes(t51) === 0)
+	    if (msg.text.toString().toLowerCase().includes(t52) === 0)
 	        bot.sendMessage(msg.chat.id, "CHI È STO QUA? HO SENTITO UN CAGNOLINO PRECEDUTO DA QUALCOS'ALTROOOH!");
         else
-	        bot.sendMessage(msg.chat.id, "AH IO DEVO FARE LE INDAGINI, SÌ PERCHÉ LA GENTE BESTEMMIAAAAH!");
+            bot.sendMessage(msg.chat.id, "AH IO DEVO FARE LE INDAGINI, SÌ PERCHÉ LA GENTE BESTEMMIAAAAH!");
+            
     if (msg.text.toString().toLowerCase().indexOf(t53) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/Z5FNub-4rnEC.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/Z5FNub-4rnEC.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t54) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/BkD_psaw6nUb.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/BkD_psaw6nUb.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t55) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/_8BZYN9rxHtc.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/_8BZYN9rxHtc.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t56) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/9DJk-rQW1X7x.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/9DJk-rQW1X7x.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t58) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/wUwwPneHVcVT.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/wUwwPneHVcVT.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t59) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/tgKhWh5aaxM5.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/tgKhWh5aaxM5.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t60) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/rYz_zqeMxbea.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/rYz_zqeMxbea.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t61) === 0)
-	    bot.sendMessage(msg.chat.id, "L'ALUNNO STRACCIA, DISTRUGGE, FA A PEZZETTI LA TAVOLA DI DISEGNOOOH!\nTI VA DI LUSSO MERJA, DI SOLITO PER QUESTE COSE METTO NOTA SUL REGISTROOOOOOH!");
+        bot.sendMessage(msg.chat.id, "L'ALUNNO STRACCIA, DISTRUGGE, FA A PEZZETTI LA TAVOLA DI DISEGNOOOH!\nTI VA DI LUSSO MERJA, DI SOLITO PER QUESTE COSE METTO NOTA SUL REGISTROOOOOOH!");
+        
     if (msg.text.toString().toLowerCase().indexOf(t63) === 0)
 	    bot.sendMessage(msg.chat.id, "EEH TI ARRANGI NON È POSSIBILE CHE DEVO SEMPRE SPIEGARE LE STESSE COSEEEH!");
     if (msg.text.toString().toLowerCase().indexOf(t64) === 0)
-	    bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/nwVgAgxNtgUC.mp3");
+        bot.sendMessage(msg.chat.id, "http://deaddrop.ftp.sh/nwVgAgxNtgUC.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t65) === 0)
-	    bot.sendMessage(msg.chat.id, "<a href=\"https://it-it.facebook.com/pages/biz/community/Animalismo-a-scuola-169759173228670/\">ANDATE A VEDERE I MIEI POST SU ANIMALISMO A SCUOLA CHE VI INTEROGOOOOH!</a>", { parse_mode: "HTML" });
+        bot.sendMessage(msg.chat.id, "<a href=\"https://it-it.facebook.com/pages/biz/community/Animalismo-a-scuola-169759173228670/\">ANDATE A VEDERE I MIEI POST SU ANIMALISMO A SCUOLA CHE VI INTEROGOOOOH!</a>", { parse_mode: "HTML" });
+        
     if (msg.text.toString().toLowerCase().indexOf(t66) === 0)
-	    bot.sendMessage(msg.chat.id, "NON COMPRATE I CAPPOTTI CON LE PELLICCE DI MURMANSKI, PERCHÉ I CINESI FANNO SOFFRIRE I CANIIIIH!");
+        bot.sendMessage(msg.chat.id, "NON COMPRATE I CAPPOTTI CON LE PELLICCE DI MURMANSKI, PERCHÉ I CINESI FANNO SOFFRIRE I CANIIIIH!");
+        
     if (msg.text.toString().toLowerCase().indexOf(t70) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/hBCOhFQAAJZk.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/hBCOhFQAAJZk.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t71) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/XeH6ckkMP16w.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/XeH6ckkMP16w.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t72) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/6W-beHCght8X.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/6W-beHCght8X.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t73) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/U2n5sRgsBmvS.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/U2n5sRgsBmvS.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t74) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/c3-KYyuDk0CE.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/c3-KYyuDk0CE.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t75) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/to6_gflluipH.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/to6_gflluipH.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t76) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/uVw2PjBpWQr7.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/uVw2PjBpWQr7.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t77) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/BtaXAJcmqD5l.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/BtaXAJcmqD5l.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t78) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/-WMAqO6nrQlS.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/-WMAqO6nrQlS.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t79) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/vSiLVwwsKYdD.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/vSiLVwwsKYdD.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t80) === 0)
         if (msg.text.toString().toLowerCase().indexOf(t60) === 0)
             bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/rYz_zqeMxbea.mp3");
         else if (msg.text.toString().toLowerCase().indexOf(t101) === 0)
             bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/QOMX04E_5Ojz.mp3");
         else
-	        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/x68Lmdlf3Tct.mp3");
+            bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/x68Lmdlf3Tct.mp3");
+            
     if (msg.text.toString().toLowerCase().indexOf(t81) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/jVW5DHcGRCe6.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/jVW5DHcGRCe6.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t82) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/SDvT6rC0ZJqv.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/SDvT6rC0ZJqv.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t83) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/GbTgmxUb3tIv.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/GbTgmxUb3tIv.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t84) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/oLe3lUTpyW5n.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/oLe3lUTpyW5n.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t85) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/g9g8eys-t_a-.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/g9g8eys-t_a-.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t86) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/kO61IBhvI4aY.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/kO61IBhvI4aY.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t87) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/u-e1QXxaSZHR.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/u-e1QXxaSZHR.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t88) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/3osIzrc1zEj3.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/3osIzrc1zEj3.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t89) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/iOTQpRkYkDsB.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/iOTQpRkYkDsB.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t90) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/9p0Z10a9-MO4.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/9p0Z10a9-MO4.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t91) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/ScdPvRncuuBJ.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/ScdPvRncuuBJ.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t92) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/Ju5ru3hcX48y.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/Ju5ru3hcX48y.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t93) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/xX0PXKeHbZ_2.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/xX0PXKeHbZ_2.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t94) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/ef7lyZ_R4v8q.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/ef7lyZ_R4v8q.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t95) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/NQqAasiOd5QJ.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/NQqAasiOd5QJ.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t96) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/9vlhOmgwt3t4.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/9vlhOmgwt3t4.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t97) === 0)
-	    bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/9HgttDKhk5kc.mp3");
+        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/9HgttDKhk5kc.mp3");
+        
     if (msg.text.toString().toLowerCase().indexOf(t98) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/Z631CgcvNgqb.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t99) === 0)
         bot.sendMessage(msg.chat.id, "LA LETTERA DI LILIANA SEGRE È INSULSA MA L'INTERVISTA HA UNA POTENZA INCREDIBILE, QUINDI ASCOLTATELA SU RAI PLAY CHE VI INTEROGOOOOH!!!");
+
     if (msg.text.toString().toLowerCase().indexOf(t102) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/MgHib6OXaAd6.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t103) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/AmMZxta5Vcdx.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t104) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/8TOZ8fMLQ3Tc.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t105) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/hYPu-2IQFFqH.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t107) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/wAI8xEGIjEgl.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t108) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/TaVCIJF-hx8K.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t109) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/bwjA4pNQtn_D.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t110) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/XPcgiFJ63me6.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t111) === 0)
         bot.sendMessage(msg.chat.id, "EH UNA VOLTA FACEVAMO 120 TAVOLE ALL'ANNOOOH!");
+
 	if (msg.text.toString().toLowerCase().indexOf(t112) === 0)
         bot.sendMessage(msg.chat.id, "IL BUSATA È CATTIVOOOOOH!");
+
 	if (msg.text.toString().toLowerCase().indexOf(t113) === 0)
         bot.sendMessage(msg.chat.id, "<code>|||||||||||||||\n|||||||||||||||\nDUEDUEDUEDU||||\nEDUEDUEDUED||||\n|||||||||||||||\n|||||||||||||||\n||||UEDUEDUEDUE\n||||DUEDUEDUEDU\n|||||||||||||||\n|||||||||||||||</code>", { parse_mode: "HTML" });
+
     if (msg.text.toString().toLowerCase().indexOf(t115) === 0)
         bot.sendMessage(msg.chat.id, "OH! LE PAPERETTEEEH! AH LEDDA DOVREMO ISCRIVERLO A QUALCHE ASSOCIAZIONE, LUI CI TIENE A QUESTE COSEEEH!");
+
     if (msg.text.toString().toLowerCase().indexOf(t116) === 0)
         bot.sendMessage(msg.chat.id, "https://www.amazon.it/s?i=stripbooks&rh=p_27%3ARenato+Busata&ref=dp_byline_sr_book_1");
+
     if (msg.text.toString().toLowerCase().indexOf(t117) === 0)
-        bot.sendLocation(msg.chat.id, 45.4244592, 11.8302266) & bot.sendMessage(msg.chat.id, "SE VENITE A TROVARE IL BUSATA VI CACCIA VIAAAAH!");        
+        bot.sendLocation(msg.chat.id, 45.4244592, 11.8302266) & bot.sendMessage(msg.chat.id, "SE VENITE A TROVARE IL BUSATA VI CACCIA VIAAAAH!");
+
     if (msg.text.toString().toLowerCase().indexOf(t118) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/CH1bB95rCFVE.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t119) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/WQol4ymy-2Kg.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t120) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/slHvVa-MuTsg.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t121) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/QTq3QoowANVr.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t122) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/_ygGIX0tgwj7.mp3");
+
     if (msg.text.toString().toLowerCase().indexOf(t123) === 0)
         bot.sendMessage(msg.chat.id, "IL PROSSIMO CHE MI CHIEDE QUANDO CAMBIO I VOTI SI BECCA DUE! LI CAMBIERÒ QUANDO SARÀ ORA!");
+
     if (msg.text.toString().toLowerCase().indexOf(t124) === 0)
         bot.sendMessage(msg.chat.id, "MERJAAAAA! IO AVANZO UNA NOTA DA TE!");
+
     if (msg.text.toString().toLowerCase().indexOf(t125) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/Fg1aqSnMOkW0.mp3");
+
 });
 
 //Visualizzazione di Businfo con /start
 bot.onText(/\/start/, (msg) => {
 	bot.sendMessage(msg.chat.id, businfo_text, { parse_mode: "HTML" });
 });
-
-//Codice di /voto
-bot.onText(/\/voto/, (msg) => {
-	var voto = Math.floor(Math.random()*(10-0+1)+0)
-    if (voto === 1)
-        bot.sendMessage(msg.chat.id, "QUESTO NON HA FATTO NIENTEEEEH! TI METTO UNOOO!");
-    else if (voto === 0)
-        bot.sendMessage(msg.chat.id, "SIGNORI LA TAVOLA ERA IN SCADENZA UN MESE FA, CHI NON CE L'HA LA PROSSIMA VOLTA SI BECCA DUE! CI SIAMO CAPITIIIIH?!");
-    else if (voto === 2)
-        bot.sendMessage(msg.chat.id, "NO HO QUASI FINITO ADESSO TI METTO DUEEEH!");
-    else if (voto === 3)
-        bot.sendMessage(msg.chat.id, "QUESTI FANNO TROPPO CASINO, ADESSO TI MANDO AL POSTO E TI BECCHI TRE! RINGRAZIA I TUOI COMPAGNI!");
-    else if (voto === 4)
-        bot.sendMessage(msg.chat.id, "QUA È TUTTO SBAGLIATOOH! AH MI SONO STUFATO DI RIPETERE SEMPRE LE STESSE COSE, ADESSO TI BECCHI QUATTRO E TE LO TIENI! SEMPRE COSÌ CON VOI!");
-    else if (voto === 5)
-        bot.sendMessage(msg.chat.id, "QUESTA LINEA È STORTAAAH! FAI I SEGNI PIÙ OMOGENEIIIIH! CINQUEEEH!");
-    else if (voto === 6)
-        bot.sendMessage(msg.chat.id, "AH GUARDA TI METTO SEI REGALATOOOH! CHI È CHE TIENE LA CONTABILITÀ DEI VOTI? SCRIVI BASTA SEIIIH!");
-    else if (voto === 7)
-        bot.sendMessage(msg.chat.id, "LA TAVOLA SI PRESENTA ABBASTANZA BENE... I DISEGNI SONO GIUSTI... SETTEEH!");
-    else if (voto === 8)
-        bot.sendMessage(msg.chat.id, "OTTO? IMPOSSIBILE, IL BUSATA NON METTE VOTI COSÌ ALTI, FATE SEMPRE DUECENTO ERRORI VOI!");
-    else if (voto === 9)
-        bot.sendMessage(msg.chat.id, "ADESSO TI BECCHI QUATTRO! NON TIRATEMI FUORI LA STORIA 'EH MA AGLI ALTRI NON L'HA DETTO', FATE SEMPRE UN SACCO DI ERRORI E AL BUSATA NE SFUGGE QUALCUNO!");
-    else if (voto === 10)
-        bot.sendMessage(msg.chat.id, "QUESTO DISEGNO È SBAGLIATO DAL FONDOOOH! METTO CINQUE INVECE DI TRE PERCHÉ CI HAI LAVORATO!");
-});
-
 
 //Codice di /consegna
 bot.onText(/\/consegna/, (msg) => {
@@ -438,14 +522,35 @@ bot.onText(/\/consegna/, (msg) => {
 
     //Correzione
     var p1 = Math.floor(Math.random()*(6-1+1)+1)
-    if (p1 === 1)
-        var text1 = "La tavola si presenta bene, in linea di massima non ci sono errori... C'è qualche imperfezione ma non è niente di grave, i segni sono omogenei. Potevi scrivere meglio...\n"
-    if (p1 === 2)
-        var text1 = "La tavola è fatta bene, non ci sono errori gravi e le scritte sono fatte bene, anche i segni sono omogenei. Potevi essere più preciso ma non è niente di grave...\n"
-    if (p1 === 3)
-        var text1 = "BRUTTO STO SEGNO! LA LINEA QUI DEV'ESSERE PARALLELA, L'HO RIPETUTO MILLE VOLTEEEH! GUARDA CHE BRUTTI STI TITOLI... L'ALTEZZA DEL CARTIGLIO È SBAGLIATA, POSSIBILE CHE NON LO ABBIATE ANCORA CAPITOOH?!\n"
 
-    bot.sendMessage(msg.chat.id, "Allora, questa è la tavola numero " + tav + "...\n" + text1)
+    if (p1 === 1)
+        var text1 = "La tavola si presenta bene, in linea di massima non ci sono errori... C'è qualche imperfezione ma non è niente di grave, i segni sono omogenei. Potevi scrivere meglio... Va be' ti do sei."
+
+    if (p1 === 2)
+        var text1 = "La tavola è fatta bene, non ci sono errori gravi e le scritte sono fatte bene, anche i segni sono omogenei. Potevi essere più preciso ma non è niente di grave... Mettiamo sei e mezzo."
+    
+    if (p1 === 3)
+        var text1 = "BRUTTO STO SEGNO! LA LINEA QUI DEV'ESSERE PARALLELA, L'HO RIPETUTO MILLE VOLTEEEH! GUARDA CHE BRUTTI STI TITOLI... L'ALTEZZA DEL CARTIGLIO È SBAGLIATA, POSSIBILE CHE NON LO ABBIATE ANCORA CAPITOOH?! ADESSO NON TI PRENDI LA SUFFICIENZA, TI BECCHI CINQUE E VAI AL POSTOOH!"
+
+    if (p1 === 4)
+        var text1 = "La tavola non è neanche tanto male, però è tanto brutto sto segno... È un sei REGALATOOH! Chi è che tiene la contabilità dei voti? SCRIVI BASTA SEIIIIH!"
+
+    if (p1 === 5)
+        var text1 = "QUESTA NON È UNA MEDIANA, È TUTTA STORTAAAH! POSSIBILE CHE DEVO RIPETERVI SEMPRE LE STESSE COSE? ADESSO ANDATE TUTTI AL POSTO E PRENDETE IL QUADERNO DI APPUNTIIH!"
+
+    if (p1 === 6)
+        var text1 = "OH QUESTA TAVOLA È FATTA BENE! *SBAM* *SBAM* ZITTIIIIH! Gli assi ci sono, le linee sono fatte bene... AH MA QUI MANCA UN PUNTO! E ALLORA INVECE DI SETTE TI BECCHI SEIIIH!"
+    
+    if (p1 === 2)
+    //Messaggo con mezzo voto
+    bot.sendMessage(msg.chat.id, "Allora, questa è la tavola numero " + tav + "...\n" + text1 + " Hai mezzi voti?", {
+        "reply_markup": {
+            "keyboard": [["Sì", "No"]]
+        }
+    });
+    else
+    //Messaggio normale
+    bot.sendMessage(msg.chat.id, "Allora, questa è la tavola numero " + tav + "...\n" + text1);
 })
 
 //Codice di /nota
