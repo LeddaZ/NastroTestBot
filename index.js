@@ -131,7 +131,7 @@ var t124 = "nota"
 var t125 = "titoli"
 
 //Testo di Businfo e /start
-var businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>2.0.0 Beta 2</code> del 5/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n120 trigger (33 parole, 3 comandi, 8 foto e 78 audio)";
+var businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>2.0.0 Beta 3</code> del 13/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n120 trigger (33 parole, 3 comandi, 8 foto e 78 audio)";
 
 //Attivazione del bot
 var bot = new Bot(token, { polling: true });
