@@ -129,9 +129,12 @@ var t122 = "via"
 var t123 = "voti"
 var t124 = "nota"
 var t125 = "titoli"
+//Variabili per il mezzo voto
+mezzo1 = "Sì";
+mezzo2 = "No";
 
 //Testo di Businfo e /start
-var businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>2.0.0 Beta 3</code> del 13/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n120 trigger (33 parole, 3 comandi, 8 foto e 78 audio)";
+var businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>2.0.0 Beta 4</code> del 21/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n120 trigger (33 parole, 3 comandi, 8 foto e 78 audio)";
 
 //Attivazione del bot
 var bot = new Bot(token, { polling: true });
@@ -149,7 +152,7 @@ bot.on("message", (msg) => {
                 [{ text: 'Pagina 4', callback_data: '4' }]
             ]
         }
-    };
+    };    
     
     //Risposte ai trigger
     if (msg.text.toString().toLowerCase().indexOf(t1) === 0)
@@ -266,10 +269,12 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(t38) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/0GA2Xeg9sRd5.mp3");
         
-    if (msg.text.toString().toLowerCase().indexOf(t39) === 0)
-        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/90d2gas3dwQa.mp3");
-        
-    if (msg.text.toString().toLowerCase(t40) === 0)
+    if (msg.text.toString().toLowerCase().indexOf(t40) === 0)
+        if (msg.text.toString().toLowerCase().indexOf(t39) === 0)
+            bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/90d2gas3dwQa.mp3");
+        else if (msg.text.toString().toLowerCase().indexOf(t108) === 0)
+            bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/TaVCIJF-hx8K.mp3");
+        else
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/EcF4bCUdfWiL.mp3");
         
     if (msg.text.toString().toLowerCase().indexOf(t41) === 0)
@@ -456,9 +461,6 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(t107) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/wAI8xEGIjEgl.mp3");
 
-    if (msg.text.toString().toLowerCase().indexOf(t108) === 0)
-        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/TaVCIJF-hx8K.mp3");
-
     if (msg.text.toString().toLowerCase().indexOf(t109) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/bwjA4pNQtn_D.mp3");
 
@@ -541,17 +543,22 @@ bot.onText(/\/consegna/, (msg) => {
     if (p1 === 6)
         var text1 = "OH QUESTA TAVOLA È FATTA BENE! *SBAM* *SBAM* ZITTIIIIH! Gli assi ci sono, le linee sono fatte bene... AH MA QUI MANCA UN PUNTO! E ALLORA INVECE DI SETTE TI BECCHI SEIIIH!"
     
+    //Messaggio con mezzo voto
     if (p1 === 2)
-    //Messaggo con mezzo voto
-    bot.sendMessage(msg.chat.id, "Allora, questa è la tavola numero " + tav + "...\n" + text1 + " Hai mezzi voti?", {
-        "reply_markup": {
-            "keyboard": [["Sì", "No"]]
-        }
-    });
-    else
+
+    //Testo del messaggio originale
+    bot.sendMessage(msg.chat.id, "Allora, questa è la tavola numero " + tav + "...\n" + text1 + " Hai mezzi voti?");
+    if (msg.text.toString().indexOf(mezzo1) === 0)
+    bot.sendMessage(msg.chat.id, "Vai a prendere la tavola, non mi fido di voi!")
+if (msg.text.toString().indexOf(mezzo2) === 0)
+    bot.sendMessage(msg.chat.id, "E allora ti tieni sei e vai al posto! E VOI SPOSTATEVI DALLA LUCEEEH!")
     //Messaggio normale
-    bot.sendMessage(msg.chat.id, "Allora, questa è la tavola numero " + tav + "...\n" + text1);
-})
+    if (p1 === 1 || p1 === 3 || p1 === 4 || p1 === 5 || p1 === 6)
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola numero " + tav + "...\n" + text1);
+
+    
+ 
+});
 
 //Codice di /nota
 bot.onText(/\/nota/, (msg) => {
@@ -594,9 +601,9 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
     //Lista audio pagina 4
     if (action === '4') {
         text = "Lista audio del Busi\nPagina 4\nMetto 2 subito, Porta la cartellina, Merja bocciato, Vedovato è un poeta, Busata perde tutto, Ciuccia il tè, Il filo, Previo terrorismo, Busi è perfido, Orco can, Calma assoluta, Rivoluzionario, Ferragosto, Telecamera, Tigri stecchite, Ventiquattrore, Via, Titoli";
-    }
+    } 
 
-    //Visualizzazione dei pulsanti anche dopo l'attivazione
+    //Visualizzazione dei pulsanti anche dopo la pressione
 	var opts = {
 		chat_id: msg.chat.id,
 		message_id: msg.message_id,
@@ -613,7 +620,6 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
     //Modifica del messaggio per visualizzare la lista di audio
 	bot.editMessageText(text, opts);
 });
-
 //Fine del codice
 
 //R. B.
