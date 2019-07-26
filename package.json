@@ -4,7 +4,7 @@
   "description": "Il bot del Busata [BETA]",
   "main": "index.js",
   "engines": {
-    "node": ">=10.16.0"
+    "node": "10.16.0"
   },
   "dependencies": {
     "dotenv": "^8.0.0",
