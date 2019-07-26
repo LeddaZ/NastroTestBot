@@ -2,6 +2,7 @@
 //Scritto in node.js con https://github.com/yagop/node-telegram-bot-api
 //Codice della versione beta
 
+
 //Dichiarazione variabili
 
 //Moduli npm richiesti
@@ -129,19 +130,17 @@ var t122 = "via"
 var t123 = "voti"
 var t124 = "nota"
 var t125 = "titoli"
-//Variabili per il mezzo voto
-mezzo1 = "Sì";
-mezzo2 = "No";
 
 //Testo di Businfo e /start
-var businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>2.0.0 Beta 4</code> del 21/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n120 trigger (33 parole, 3 comandi, 8 foto e 78 audio)";
+var businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>2.0.0 Beta 4</code> del 27/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n121 trigger (33 parole, 4 comandi, 8 foto e 78 audio)";
 
-//Attivazione del bot
+//Onestamente non mi ricordo a cosa serve questo
 var bot = new Bot(token, { polling: true });
+
 
 //Codice del bot
 bot.on("message", (msg) => {
-
+var ciao = 0
     //Pulsanti per BusiAudio
     var opts = {
         reply_markup: {
@@ -310,8 +309,8 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(t50) === 0)
         bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/E_FJlFM2gc0a.jpg", { caption: "NON SI SPRECA LA CARTAAAAAH!" });
         
-    if (msg.text.toString().toLowerCase().includes(t51) === 0)
-	    if (msg.text.toString().toLowerCase().includes(t52) === 0)
+    if (msg.text.toString().toLowerCase().indexOf(t51) === 0)
+        if (msg.text.toString().toLowerCase().indexOf(t52) === 0)
 	        bot.sendMessage(msg.chat.id, "CHI È STO QUA? HO SENTITO UN CAGNOLINO PRECEDUTO DA QUALCOS'ALTROOOH!");
         else
             bot.sendMessage(msg.chat.id, "AH IO DEVO FARE LE INDAGINI, SÌ PERCHÉ LA GENTE BESTEMMIAAAAH!");
@@ -511,54 +510,12 @@ bot.on("message", (msg) => {
 
 });
 
+
 //Visualizzazione di Businfo con /start
 bot.onText(/\/start/, (msg) => {
 	bot.sendMessage(msg.chat.id, businfo_text, { parse_mode: "HTML" });
 });
 
-//Codice di /consegna
-bot.onText(/\/consegna/, (msg) => {
-
-    //Numero della tavola
-    var tav = Math.floor(Math.random()*(12-1+1)+1)
-
-    //Correzione
-    var p1 = Math.floor(Math.random()*(6-1+1)+1)
-
-    if (p1 === 1)
-        var text1 = "La tavola si presenta bene, in linea di massima non ci sono errori... C'è qualche imperfezione ma non è niente di grave, i segni sono omogenei. Potevi scrivere meglio... Va be' ti do sei."
-
-    if (p1 === 2)
-        var text1 = "La tavola è fatta bene, non ci sono errori gravi e le scritte sono fatte bene, anche i segni sono omogenei. Potevi essere più preciso ma non è niente di grave... Mettiamo sei e mezzo."
-    
-    if (p1 === 3)
-        var text1 = "BRUTTO STO SEGNO! LA LINEA QUI DEV'ESSERE PARALLELA, L'HO RIPETUTO MILLE VOLTEEEH! GUARDA CHE BRUTTI STI TITOLI... L'ALTEZZA DEL CARTIGLIO È SBAGLIATA, POSSIBILE CHE NON LO ABBIATE ANCORA CAPITOOH?! ADESSO NON TI PRENDI LA SUFFICIENZA, TI BECCHI CINQUE E VAI AL POSTOOH!"
-
-    if (p1 === 4)
-        var text1 = "La tavola non è neanche tanto male, però è tanto brutto sto segno... È un sei REGALATOOH! Chi è che tiene la contabilità dei voti? SCRIVI BASTA SEIIIIH!"
-
-    if (p1 === 5)
-        var text1 = "QUESTA NON È UNA MEDIANA, È TUTTA STORTAAAH! POSSIBILE CHE DEVO RIPETERVI SEMPRE LE STESSE COSE? ADESSO ANDATE TUTTI AL POSTO E PRENDETE IL QUADERNO DI APPUNTIIH!"
-
-    if (p1 === 6)
-        var text1 = "OH QUESTA TAVOLA È FATTA BENE! *SBAM* *SBAM* ZITTIIIIH! Gli assi ci sono, le linee sono fatte bene... AH MA QUI MANCA UN PUNTO! E ALLORA INVECE DI SETTE TI BECCHI SEIIIH!"
-    
-    //Messaggio con mezzo voto
-    if (p1 === 2)
-
-    //Testo del messaggio originale
-    bot.sendMessage(msg.chat.id, "Allora, questa è la tavola numero " + tav + "...\n" + text1 + " Hai mezzi voti?");
-    if (msg.text.toString().indexOf(mezzo1) === 0)
-    bot.sendMessage(msg.chat.id, "Vai a prendere la tavola, non mi fido di voi!")
-if (msg.text.toString().indexOf(mezzo2) === 0)
-    bot.sendMessage(msg.chat.id, "E allora ti tieni sei e vai al posto! E VOI SPOSTATEVI DALLA LUCEEEH!")
-    //Messaggio normale
-    if (p1 === 1 || p1 === 3 || p1 === 4 || p1 === 5 || p1 === 6)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola numero " + tav + "...\n" + text1);
-
-    
- 
-});
 
 //Codice di /nota
 bot.onText(/\/nota/, (msg) => {
@@ -576,6 +533,7 @@ bot.onText(/\/nota/, (msg) => {
 	else if (nota === 6)
 		bot.sendMessage(msg.chat.id, msg.from.first_name + " disturba continuamente la lezione chiaccherando.");
 });
+
 
 //Risposta alla pressione di un pulsante su BusiAudio
 bot.on('callback_query', function onCallbackQuery(callbackQuery) {
@@ -620,6 +578,63 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
     //Modifica del messaggio per visualizzare la lista di audio
 	bot.editMessageText(text, opts);
 });
+
+
+//Codice di /caccia
+bot.onText(/\/caccia/, (msg) => {
+    var chatId = msg.chat.id;
+    var userId = msg.from.id;
+    var replyId = msg.reply_to_message.from.id;
+    var replyName = msg.reply_to_message.from.first_name;
+    var fromName = msg.from.first_name;
+    var messageId = msg.message_id;
+
+    if (msg.reply_to_message == undefined){
+        return;
+    }
+    
+    bot.getChatMember(chatId, userId).then(function(data){
+        if((data.status == 'creator') || (data.status == 'administrator')){
+        bot.kickChatMember(chatId, replyId)
+            .then(function(result){
+                bot.deleteMessage(chatId, messageId);
+                bot.sendMessage(chatId, replyName + " ADESSO TI CACCIO VIAAH!")
+            })
+        }
+        else {
+        bot.sendMessage(chatId, "CHI È STO QUA? VAI VIA, SOLO GLI AMMINISTRATORI POSSONO DIRE AL BUSATA CHI VA CACCIATO!")
+        }
+    })
+});
+
+
+bot.onText(/\/ritorna/, function(msg){
+    
+    var chatId = msg.chat.id;
+    var replyId = msg.reply_to_message.from.id;
+    var userId = msg.from.id;
+    var replyName = msg.reply_to_message.from.first_name;
+    var fromName = msg.from.first_name;
+    var messageId = msg.message_id;
+    
+   if(msg.reply_to_message == undefined){
+   return;
+   }
+   
+  bot.getChatMember(chatId, userId).then(function(data){
+       if((data.status == 'creator') || (data.status == 'administrator')){
+            bot.unbanChatMember(chatId, replyId).then(function(result){
+                bot.deleteMessage(chatId, messageId);
+                bot.sendMessage(chatId, replyName + " TORNA DENTRO E VEDI DI COMPORTARTI BENE, ALTRIMENTI IL BUSATA VA ALL'INFERNO PER COLPA VOSTRAAAH!");
+            })
+        }
+        else {
+            bot.sendMessage(chatId, "CHI È STO QUA? VAI VIA, SOLO GLI AMMINISTRATORI POSSONO DIRE AL BUSATA CHI DEVE TORNARE!");
+        }
+    })
+});
+
+
 //Fine del codice
 
 //R. B.
