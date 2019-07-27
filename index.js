@@ -112,27 +112,27 @@ var t102 = "busata perde tutto";
 var t103 = "ciuccia il t";
 var t104 = "il filo";
 var t105 = "previo terrorismo";
-var t107 = "busi è perfido"
-var t108 = "orco can"
-var t109 = "calma assoluta"
-var t110 = "rivoluzionario"
-var t111 = "120 tavole"
-var t112 = "cattivo"
-var t113 = "busasci"
-var t115 = "paperette"
-var t116 = "busiamazon"
-var t117 = "busicasa"
-var t118 = "ferragosto"
-var t119 = "telecamera"
-var t120 = "tigri stecchite"
-var t121 = "ventiquattrore"
-var t122 = "via"
-var t123 = "voti"
-var t124 = "nota"
-var t125 = "titoli"
+var t107 = "busi è perfido";
+var t108 = "orco can";
+var t109 = "calma assoluta";
+var t110 = "rivoluzionario";
+var t111 = "120 tavole";
+var t112 = "cattivo";
+var t113 = "busasci";
+var t115 = "paperette";
+var t116 = "busiamazon";
+var t117 = "busicasa";
+var t118 = "ferragosto";
+var t119 = "telecamera";
+var t120 = "tigri stecchite";
+var t121 = "ventiquattrore";
+var t122 = "via";
+var t123 = "voti";
+var t124 = "nota";
+var t125 = "titoli";
 
 //Testo di Businfo e /start
-var businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>2.0.0 Beta 4</code> del 27/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n121 trigger (33 parole, 4 comandi, 8 foto e 78 audio)";
+var businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>2.0.0 Beta 5</code> del 27/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)";
 
 //Onestamente non mi ricordo a cosa serve questo
 var bot = new Bot(token, { polling: true });
@@ -140,7 +140,6 @@ var bot = new Bot(token, { polling: true });
 
 //Codice del bot
 bot.on("message", (msg) => {
-var ciao = 0
     //Pulsanti per BusiAudio
     var opts = {
         reply_markup: {
@@ -519,7 +518,7 @@ bot.onText(/\/start/, (msg) => {
 
 //Codice di /nota
 bot.onText(/\/nota/, (msg) => {
-	var nota = Math.floor(Math.random()*(6-1+1)+1)
+	var nota = Math.floor(Math.random()*(7-1+1)+1)
     if (nota === 1)
         bot.sendMessage(msg.chat.id, msg.from.first_name + ", in laboratorio, sfoglia appunti di chimica invece di disegnare.");
     else if (nota === 2)
@@ -531,7 +530,9 @@ bot.onText(/\/nota/, (msg) => {
 	else if (nota === 5)
 		bot.sendMessage(msg.chat.id, msg.from.first_name + " svuota lo zaino per pulirlo, poi chiede di avere il materiale per pulire il banco.");
 	else if (nota === 6)
-		bot.sendMessage(msg.chat.id, msg.from.first_name + " disturba continuamente la lezione chiaccherando.");
+        bot.sendMessage(msg.chat.id, msg.from.first_name + " disturba continuamente la lezione chiaccherando.");
+    else if (nota === 7)
+        bot.sendMessage(msg.chat.id, msg.from.first_name + " gira per la classe chiedendo il materiale da disegno.");
 });
 
 
@@ -586,7 +587,6 @@ bot.onText(/\/caccia/, (msg) => {
     var userId = msg.from.id;
     var replyId = msg.reply_to_message.from.id;
     var replyName = msg.reply_to_message.from.first_name;
-    var fromName = msg.from.first_name;
     var messageId = msg.message_id;
 
     if (msg.reply_to_message == undefined){
@@ -608,13 +608,13 @@ bot.onText(/\/caccia/, (msg) => {
 });
 
 
+//Codice di /ritorna
 bot.onText(/\/ritorna/, function(msg){
     
     var chatId = msg.chat.id;
     var replyId = msg.reply_to_message.from.id;
     var userId = msg.from.id;
     var replyName = msg.reply_to_message.from.first_name;
-    var fromName = msg.from.first_name;
     var messageId = msg.message_id;
     
    if(msg.reply_to_message == undefined){
@@ -632,6 +632,24 @@ bot.onText(/\/ritorna/, function(msg){
             bot.sendMessage(chatId, "CHI È STO QUA? VAI VIA, SOLO GLI AMMINISTRATORI POSSONO DIRE AL BUSATA CHI DEVE TORNARE!");
         }
     })
+});
+
+
+//Codice di /consegna
+bot.onText(/\/consegna/, (msg) => {
+    var nota = Math.floor(Math.random() * (6 - 1 + 1) + 1)
+    if (nota === 1)
+        bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
+    else if (nota === 2)
+        bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
+    else if (nota === 3)
+        bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
+    else if (nota === 4)
+        bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
+    else if (nota === 5)
+        bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
+    else if (nota === 6)
+        bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
 });
 
 
