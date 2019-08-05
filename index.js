@@ -639,7 +639,7 @@ bot.onText(/\/ritorna/, function(msg){
 bot.onText(/\/consegna/, (msg) => {
     var nota = Math.floor(Math.random() * (6 - 1 + 1) + 1)
     if (nota === 1)
-        bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
+        bot.sendMessage(msg.chat.id, "test");
     else if (nota === 2)
         bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
     else if (nota === 3)
