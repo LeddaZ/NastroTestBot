@@ -132,7 +132,7 @@ var t124 = "nota";
 var t125 = "titoli";
 
 //Testo di Businfo e /start
-var businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>2.0.0 Beta 6</code> del 6/8/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)";
+var businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>2.0.0 Beta 5</code> del 27/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)";
 
 //Onestamente non mi ricordo a cosa serve questo
 var bot = new Bot(token, { polling: true });
@@ -639,7 +639,7 @@ bot.onText(/\/ritorna/, function(msg){
 bot.onText(/\/consegna/, (msg) => {
     var nota = Math.floor(Math.random() * (6 - 1 + 1) + 1)
     if (nota === 1)
-        bot.sendMessage(msg.chat.id, "La tavola non si presenta neanche male... BRUTTO STO QUA! DOVEVI ESSERE PIÙ OMOGENEO CON I SEGNIIIIH!");
+        bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
     else if (nota === 2)
         bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
     else if (nota === 3)
