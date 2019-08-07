@@ -1,10 +1,11 @@
 {
   "name": "nastrotestbot",
-  "version": "2.0.0b5",
+  "version": "2.0.0b6",
   "description": "Il bot del Busata [BETA]",
   "main": "index.js",
   "dependencies": {
     "dotenv": "^8.0.0",
+    "git-rev-sync": "^1.12.0",
     "lodash": "^4.17.14",
     "node-telegram-bot-api": "^0.30.0"
   },
