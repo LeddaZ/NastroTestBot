@@ -135,12 +135,7 @@ var t125 = "titoli";
 
 //Hash dell'ultimo commit su GitHub
 git().clone('https://github.com/LeddaZ/NastroTestBot');
-var commit = fs.readFileSync('NastroTestBot/.git/HEAD').toString();
-if (commit.indexOf(':') === -1) {
-    return commit;
-} else {
-    return fs.readFileSync('NastroTestBot/.git/' + commit.substring(5)).toString();
-}
+var commit = fs.readFileSync('NastroTestBot/.git/refs/heads/master').toString().slice(0, 7);
 
 //Testo di Businfo e /start
 var businfo_text = "<b>Il Busata [TEST]</b> by @LeddaZ\nCommit <code>" + commit + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)";
