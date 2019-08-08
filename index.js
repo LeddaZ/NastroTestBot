@@ -11,12 +11,6 @@ var request = require("request");
 var dotenv = require('dotenv').config();
 var token = process.env.TEST_TOKEN;
 var git = require('simple-git');
-let port = process.env.PORT;
-if (port == null || port == "") {
-    port = 8000;
-}
-app.listen(port);
-
 
 //Trigger
 var t1 = "loddo";
