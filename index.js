@@ -11,6 +11,7 @@ var request = require("request");
 var dotenv = require('dotenv').config();
 var token = process.env.TEST_TOKEN;
 var git = require('simple-git');
+var fs = require('fs');
 
 //Trigger
 var t1 = "loddo";
