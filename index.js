@@ -135,11 +135,11 @@ var t125 = "titoli";
 
 //Hash dell'ultimo commit su GitHub
 git().clone('https://github.com/LeddaZ/NastroTestBot');
-var commit = fs.readFileSync('.git/HEAD').toString();
+var commit = fs.readFileSync('NastroTestBot/.git/HEAD').toString();
 if (commit.indexOf(':') === -1) {
     return commit;
 } else {
-    return fs.readFileSync('.git/' + commit.substring(5)).toString();
+    return fs.readFileSync('NastroTestBot/.git/' + commit.substring(5)).toString();
 }
 
 //Testo di Businfo e /start
