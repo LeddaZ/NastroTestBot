@@ -11,6 +11,9 @@ var request = require("request");
 var dotenv = require('dotenv').config();
 var token = process.env.TEST_TOKEN;
 var fs = require('fs');
+var NodeGit = require("nodegit");
+var fse = require("fs-extra");
+var path = "./tmp";
 
 //Trigger
 var t1 = "loddo";
@@ -133,10 +136,30 @@ var t124 = "nota";
 var t125 = "titoli";
 
 //Hash dell'ultimo commit su GitHub
-var commit = fs.readFileSync('tmp/.git/refs/heads/master').toString().slice(0, 7);
+fse.remove(path).then(function () {
 
-//Testo di Businfo e /start
-var businfo_text = "<b>Il Busata [TEST]</b> by @LeddaZ\nCommit <code>" + commit + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)";
+    NodeGit.Clone(
+        "https://github.com/LeddaZ/NastroTestBot.git",
+        path,
+        {
+            fetchOpts: {
+                callbacks: {
+                    certificateCheck: function () {
+                        // github will fail cert check on some OSX machines
+                        // this overrides that check
+                        return 0;
+                    }
+                }
+            }
+        })
+});
+function boiFunc(arg) {
+    var commit = fs.readFileSync('tmp/.git/refs/heads/master').toString().slice(0, 7);
+    console.log("commit: " + commit);
+    global.businfo_text = "<b>Il Busata [TEST]</b> by @LeddaZ\nCommit <code>" + commit + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)"
+    }
+
+setTimeout(boiFunc, 5500, 'lel');
 
 //Onestamente non mi ricordo a cosa serve questo
 var bot = new Bot(token, { polling: true });
