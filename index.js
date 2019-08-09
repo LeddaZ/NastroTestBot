@@ -10,10 +10,6 @@ var Bot = require("node-telegram-bot-api");
 var request = require("request");
 var dotenv = require('dotenv').config();
 var token = process.env.TEST_TOKEN;
-var fs = require('fs');
-var NodeGit = require("nodegit");
-var fse = require("fs-extra");
-var path = "./tmp";
 
 //Trigger
 var t1 = "loddo";
@@ -135,31 +131,8 @@ var t123 = "voti";
 var t124 = "nota";
 var t125 = "titoli";
 
-//Hash dell'ultimo commit su GitHub
-fse.remove(path).then(function () {
-
-    NodeGit.Clone(
-        "https://github.com/LeddaZ/NastroTestBot.git",
-        path,
-        {
-            fetchOpts: {
-                callbacks: {
-                    certificateCheck: function () {
-                        // github will fail cert check on some OSX machines
-                        // this overrides that check
-                        return 0;
-                    }
-                }
-            }
-        })
-});
-function boiFunc(arg) {
-    var commit = fs.readFileSync('tmp/.git/refs/heads/master').toString().slice(0, 7);
-    console.log("commit: " + commit);
-    global.businfo_text = "<b>Il Busata [TEST]</b> by @LeddaZ\nCommit <code>" + commit + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)"
-    }
-
-setTimeout(boiFunc, 5500, 'lel');
+//Testo di Businfo e /start
+var businfo_text = "<b>Il Busata</b> by @LeddaZ\nVersione <code>2.0.0 Beta 5</code> del 27/7/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)";
 
 //Onestamente non mi ricordo a cosa serve questo
 var bot = new Bot(token, { polling: true });
@@ -664,24 +637,19 @@ bot.onText(/\/ritorna/, function(msg){
 
 //Codice di /consegna
 bot.onText(/\/consegna/, (msg) => {
-    var tav = Math.floor(Math.random() * (12 - 1 + 1) + 1)
-    if (tav = 2)
-        var mezzo = "Hai mezzi voti?"
-    else
-        var mezzo = ""
     var nota = Math.floor(Math.random() * (6 - 1 + 1) + 1)
     if (nota === 1)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola" + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? ADESSO VAI AL POSTO E TI BECCHI CINQUEEH!");
+        bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
     else if (nota === 2)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola" + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? ADESSO VAI AL POSTO E TI BECCHI CINQUEEH!");
+        bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
     else if (nota === 3)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola" + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? ADESSO VAI AL POSTO E TI BECCHI CINQUEEH!");
+        bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
     else if (nota === 4)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola" + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? ADESSO VAI AL POSTO E TI BECCHI CINQUEEH!");
+        bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
     else if (nota === 5)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola" + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? ADESSO VAI AL POSTO E TI BECCHI CINQUEEH!");
+        bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
     else if (nota === 6)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola" + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? ADESSO VAI AL POSTO E TI BECCHI CINQUEEH!");
+        bot.sendMessage(msg.chat.id, "Prima o poi riuscirò a implementare sto comando");
 });
 
 
