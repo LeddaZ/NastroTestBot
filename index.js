@@ -10,6 +10,7 @@ var Bot = require("node-telegram-bot-api");
 var request = require("request");
 var dotenv = require('dotenv').config();
 var token = process.env.TEST_TOKEN;
+var fs = require('fs');
 
 //Trigger
 var t1 = "loddo";
@@ -131,8 +132,11 @@ var t123 = "voti";
 var t124 = "nota";
 var t125 = "titoli";
 
+//Hash dell'ultimo commit su GitHub
+var commit = fs.readFileSync('tmp/.git/refs/heads/master').toString().slice(0, 7);
+
 //Testo di Businfo e /start
-var businfo_text = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>2.0.0 Beta 5</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)";
+var businfo_text = "<b>Il Busata [TEST]</b> by @LeddaZ\nCommit <code>" + commit + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)";
 
 //Onestamente non mi ricordo a cosa serve questo
 var bot = new Bot(token, { polling: true });

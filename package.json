@@ -1,18 +1,23 @@
 {
   "name": "nastrotestbot",
-  "version": "2.0.0b5",
+  "version": "2.0.0b6",
   "description": "Il bot del Busata [BETA]",
   "main": "index.js",
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "dependencies": {
     "child_process": "^1.0.2",
     "dotenv": "^8.0.0",
+    "fs-extra": "^8.1.0",
     "lodash": "^4.17.14",
-    "node-telegram-bot-api": "^0.30.0"
+    "node-telegram-bot-api": "^0.30.0",
+    "nodegit": "^0.25.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node clone.js && node index.js"
   },
   "author": "@LeddaZ on Telegram",
   "license": "ISC",
