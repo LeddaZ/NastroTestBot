@@ -132,10 +132,11 @@ var t124 = "nota";
 var t125 = "titoli";
 
 //Testo di Businfo e /start
-var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>2.0.0-pre6</code> del 10/8/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)"
+var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>2.0.0-pre7</code> del 10/8/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)"
 
 
 //Codice del bot
+const bot = new Bot(token, {polling: true});
 bot.on("message", (msg) => {
     //Pulsanti per BusiAudio
     var opts = {
