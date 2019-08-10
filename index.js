@@ -1,6 +1,6 @@
 //Il Busata by @LeddaZ
 //Scritto in node.js con https://github.com/yagop/node-telegram-bot-api
-//Codice della versione beta
+//Codice dell'ultima versione pre-rilascio
 
 
 //Dichiarazione variabili
@@ -10,10 +10,6 @@ var Bot = require("node-telegram-bot-api");
 var request = require("request");
 var dotenv = require('dotenv').config();
 var token = process.env.TEST_TOKEN;
-var fs = require('fs');
-var NodeGit = require("nodegit");
-var fse = require("fs-extra");
-var path = "./tmp";
 
 //Trigger
 var t1 = "loddo";
@@ -135,34 +131,8 @@ var t123 = "voti";
 var t124 = "nota";
 var t125 = "titoli";
 
-//Hash dell'ultimo commit su GitHub
-fse.remove(path).then(function () {
-
-    NodeGit.Clone(
-        "https://github.com/LeddaZ/NastroTestBot.git",
-        path,
-        {
-            fetchOpts: {
-                callbacks: {
-                    certificateCheck: function () {
-                        // github will fail cert check on some OSX machines
-                        // this overrides that check
-                        return 0;
-                    }
-                }
-            }
-        })
-});
-function boiFunc(arg) {
-    var commit = fs.readFileSync('tmp/.git/refs/heads/master').toString().slice(0, 7);
-    console.log("commit: " + commit);
-    global.businfo_text = "<b>Il Busata [TEST]</b> by @LeddaZ\nCommit <code>" + commit + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)"
-    }
-
-setTimeout(boiFunc, 5500, 'lel');
-
-//Onestamente non mi ricordo a cosa serve questo
-var bot = new Bot(token, { polling: true });
+//Testo di Businfo e /start
+var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>2.0.0-pre6</code> del 10/8/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)"
 
 
 //Codice del bot
@@ -193,7 +163,7 @@ bot.on("message", (msg) => {
         bot.sendMessage(msg.chat.id, "MERJAAA VAI FUORI DALLA PORTAAAAAH!");
 
     if (msg.text.toString().toLowerCase().indexOf(t5) === 0)
-        bot.sendMessage(msg.chat.id, businfo_text, { parse_mode: "HTML" });
+        bot.sendMessage(msg.chat.id, start, { parse_mode: "HTML" });
 
     if (msg.text.toString().toLowerCase().indexOf(t6) === 0)
         bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <code>qualsiasi cosa</code>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, /voto, 120 tavole, Cattivo, Busascii, /nota, Paperette, BusiAmazon, Voti, Nota", { parse_mode: "HTML" });
@@ -539,7 +509,7 @@ bot.on("message", (msg) => {
 
 //Visualizzazione di Businfo con /start
 bot.onText(/\/start/, (msg) => {
-	bot.sendMessage(msg.chat.id, businfo_text, { parse_mode: "HTML" });
+	bot.sendMessage(msg.chat.id, start, { parse_mode: "HTML" });
 });
 
 
@@ -671,9 +641,9 @@ bot.onText(/\/consegna/, (msg) => {
         var mezzo = ""
     var nota = Math.floor(Math.random() * (6 - 1 + 1) + 1)
     if (nota === 1)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola" + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? ADESSO VAI AL POSTO E TI BECCHI CINQUEEH!");
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola" + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? TI METTO SEI RE-GA-LA-TO, CHI È CHE TIENE LA CONTABILITÀ DEI VOTI? SCRIVI BASTA SEIIIH!");
     else if (nota === 2)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola" + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? ADESSO VAI AL POSTO E TI BECCHI CINQUEEH!");
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola" + tav + "...\nMA NON È POSSIBILE CHE UNA MEDIANA SIA A 17 DA UNA PARTE E A 12 DALL'ALTRA! È TUTTO STORTOOOH! ADESSO VAI AL POSTO E TI BECCHI CINQUEEEH!");
     else if (nota === 3)
         bot.sendMessage(msg.chat.id, "Allora, questa è la tavola" + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? ADESSO VAI AL POSTO E TI BECCHI CINQUEEH!");
     else if (nota === 4)
