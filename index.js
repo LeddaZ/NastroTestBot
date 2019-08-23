@@ -9,7 +9,6 @@
 var Bot = require("node-telegram-bot-api");
 var request = require("request");
 var dotenv = require('dotenv').config();
-var token = process.env.TEST_TOKEN;
 
 //Trigger
 var t1 = "loddo";
@@ -131,8 +130,15 @@ var t123 = "voti";
 var t124 = "nota";
 var t125 = "titoli";
 
+//Token del bot
+var token = process.env.TEST_TOKEN;
+
+//Versione del bot
+var app = require('./package.json');
+var ver = app.version;
+
 //Testo di Businfo e /start
-var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>2.0.0-pre9</code> del 24/8/2019\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)"
+var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>" + ver + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)"
 
 
 //Codice del bot
