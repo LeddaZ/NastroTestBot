@@ -635,7 +635,7 @@ bot.onText(/\/ritorna/, function(msg){
 
 //Codice di /consegna
 bot.onText(/\/consegna/, (msg) => {
-    var tav = Math.floor(Math.random() * (12 - 1 + 1) + 1)
+    var tav = Math.floor(Math.random() * (13 - 1 + 1) + 1)
     var nota = Math.floor(Math.random() * (3 - 1 + 1) + 1)
     if (nota === 1)
         bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? TI METTO SEI RE-GA-LA-TO, CHI È CHE TIENE LA CONTABILITÀ DEI VOTI? SCRIVI BASTA SEIIIH!");
