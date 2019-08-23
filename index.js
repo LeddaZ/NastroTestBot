@@ -188,7 +188,7 @@ bot.on("message", (msg) => {
         bot.sendMessage(msg.chat.id, "IL PUNTO Z È ALL'INFINITOOOH!");
 
     if (msg.text.toString().toLowerCase().indexOf(t13) === 0)
-        bot.sendMessage(msg.chat.id, "<a href=\"http://www.paesaggioveneto.it/\">Paesaggio Veneto - Un'idea di Renato Busata</a>", { parse_mode: "HTML" });
+        bot.sendMessage(msg.chat.id, "<a href=\"http://www.paesaggioveneto.it/\">Paesaggio Veneto - Un'idea di <b>Renato Busata</b></a>", { parse_mode: "HTML" });
 
     if (msg.text.toString().toLowerCase().indexOf(t14) === 0)
         bot.sendMessage(msg.chat.id, "Le farfalle fanno AAAAAHHHHHH!");
