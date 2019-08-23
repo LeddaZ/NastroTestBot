@@ -182,7 +182,7 @@ bot.on("message", (msg) => {
         bot.sendMessage(msg.chat.id, "SEI BELLABONA?");
 
     if (msg.text.toString().toLowerCase().indexOf(t11) === 0)
-        bot.sendMessage(msg.chat.id, "Dire 'salute' quando si stErnuta è buona educazione, ma in alcuni casi, come in 2IE, disturba la lezione, quindi non si dice, pena... L'INFERNOOOOOOH! CI SIAMO CAPITIIIIH?");
+        bot.sendMessage(msg.chat.id, "Dire 'salute' quando si st<b>E</b>rnuta è buona educazione, ma in alcuni casi, come in 2IE, disturba la lezione, quindi non si dice, pena... L'INFERNOOOOOOH! CI SIAMO CAPITIIIIH?", { parse_mode: "HTML" });
 
     if (msg.text.toString().toLowerCase().indexOf(t12) === 0)
         bot.sendMessage(msg.chat.id, "IL PUNTO Z È ALL'INFINITOOOH!");
