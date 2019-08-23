@@ -1,4 +1,8 @@
 {
     "version": 1,
-    "public": true
+    "public": true,
+    "name": "nastrotestbot",
+    "github": {
+        "silent": true
+      }
 }
