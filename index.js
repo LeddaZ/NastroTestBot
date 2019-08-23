@@ -636,13 +636,17 @@ bot.onText(/\/ritorna/, function(msg){
 //Codice di /consegna
 bot.onText(/\/consegna/, (msg) => {
     var tav = Math.floor(Math.random() * (13 - 1 + 1) + 1)
-    var nota = Math.floor(Math.random() * (3 - 1 + 1) + 1)
+    var nota = Math.floor(Math.random() * (5 - 1 + 1) + 1)
     if (nota === 1)
         bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? TI METTO SEI RE-GA-LA-TO, CHI È CHE TIENE LA CONTABILITÀ DEI VOTI? SCRIVI BASTA SEIIIH!");
     else if (nota === 2)
         bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nMA NON È POSSIBILE CHE UNA MEDIANA SIA A 17 DA UNA PARTE E A 12 DALL'ALTRA! È TUTTO STORTOOOH! ADESSO VAI AL POSTO E TI BECCHI CINQUEEEH!");
     else if (nota === 3)
         bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nVE L'HO DETTO MILLE VOLTE, IL CARTIGLIO SI FA DA METÀ FOGLIO, DEVO SEMPRE RIPETERE LE STESSE COSEEEEH! PER STAVOLTA METTIAMO SEI, MA È REGALATOOOH!");
+    else if (nota === 4)
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nLa tavola si presenta bene... I segni sono omogenei e non ci sono errori gravi, anche i titoli sono fatti bene... Tutto sommato è una bella tavola, mettiamo sette.");
+    else if (nota === 5)
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nCOS'È STO SEGNO ORRIBILE?! VAI AL POSTO E SISTEMALO ALTRIMENTI TI BECCHI TRE E TE LO TIENIIIH!")
 });
 
 
