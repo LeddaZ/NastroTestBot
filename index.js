@@ -154,7 +154,7 @@ bot.on("message", (msg) => {
                 [{ text: 'Pagina 4', callback_data: '4' }]
             ]
         }
-    };    
+    };
     
     //Risposte ai trigger
     if (msg.text.toString().toLowerCase().indexOf(t1) === 0)
@@ -566,7 +566,7 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
         text = "Lista audio del Busi\nPagina 4\nMetto 2 subito, Porta la cartellina, Merja bocciato, Vedovato è un poeta, Busata perde tutto, Ciuccia il tè, Il filo, Previo terrorismo, Busi è perfido, Orco can, Calma assoluta, Rivoluzionario, Ferragosto, Telecamera, Tigri stecchite, Ventiquattrore, Via, Titoli";
     } 
 
-    //Visualizzazione dei pulsanti anche dopo la pressione
+    //Visualizzazione dei pulsanti di BusiAudio anche dopo la pressione
 	var opts = {
 		chat_id: msg.chat.id,
 		message_id: msg.message_id,
@@ -580,7 +580,7 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 		}
     };
 
-    //Modifica del messaggio per visualizzare la lista di audio
+    //Modifica del messaggio per visualizzare la lista di audio con i pulsanti
 	bot.editMessageText(text, opts);
 });
 
@@ -644,7 +644,7 @@ bot.onText(/\/consegna/, (msg) => {
     var tav = Math.floor(Math.random() * (13 - 1 + 1) + 1)
     var nota = Math.floor(Math.random() * (5 - 1 + 1) + 1)
     if (nota === 1)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? TI METTO SEI RE-GA-LA-TO, CHI È CHE TIENE LA CONTABILITÀ DEI VOTI? SCRIVI BASTA SEIIIH!");
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? TI METTO SEI E MEZZO RE-GA-LA-TO, CHI È CHE TIENE LA CONTABILITÀ DEI VOTI? SCRIVI BASTA SEIIIH!");
     else if (nota === 2)
         bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nMA NON È POSSIBILE CHE UNA MEDIANA SIA A 17 DA UNA PARTE E A 12 DALL'ALTRA! È TUTTO STORTOOOH! ADESSO VAI AL POSTO E TI BECCHI CINQUEEEH!");
     else if (nota === 3)
