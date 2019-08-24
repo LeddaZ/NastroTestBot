@@ -173,7 +173,7 @@ bot.on("message", (msg) => {
         bot.sendMessage(msg.chat.id, start, { parse_mode: "HTML" });
 
     if (msg.text.toString().toLowerCase().indexOf(t6) === 0)
-        bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <qualsiasi cosa>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, /voto, 120 tavole, Cattivo, Busascii, /nota, Paperette, BusiAmazon, Voti, Nota, /consegna", { parse_mode: "HTML" });
+        bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <qualsiasi cosa>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, /voto, 120 tavole, Cattivo, Busascii, /nota, Paperette, BusiAmazon, Voti, Nota, /consegna, /caccia, /ritorna", { parse_mode: "HTML" });
 
     if (msg.text.toString().toLowerCase().indexOf(t7) === 0)
         if (msg.text.toString().toLowerCase().indexOf(t100) === 0)
