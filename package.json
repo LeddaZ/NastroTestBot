@@ -1,6 +1,6 @@
 {
   "name": "nastrotestbot",
-  "version": "2.0.0-pre10",
+  "version": "2.0.0-pre11",
   "description": "Il bot del Busata [BETA]",
   "main": "index.js",
   "engines": {
