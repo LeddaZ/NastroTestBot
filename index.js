@@ -142,6 +142,7 @@ var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>" + ver + "</cod
 
 
 //Codice del bot
+console.log("Il Busi " + ver + " è stato avviato correttamente :)");
 const bot = new Bot(token, {polling: true});
 bot.on("message", (msg) => {
     //Pulsanti per BusiAudio
@@ -648,15 +649,28 @@ bot.onText(/\/consegna/, (msg) => {
     //Numero di note
     var nota = Math.floor(Math.random() * (5 - 1 + 1) + 1)
     if (nota === 1)
-        bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/WKZlHHwwzgqc.png", { caption: "Allora, questa è la tavola " + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? TI METTO SEI E MEZZO RE-GA-LA-TO, CHI È CHE TIENE LA CONTABILITÀ DEI VOTI? SCRIVI BASTA SEIIIH!" });
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? TI METTO SEI E MEZZO RE-GA-LA-TO, CHI È CHE TIENE LA CONTABILITÀ DEI VOTI? SCRIVI BASTA SEIIIH!\nHai mezzi voti?", {
+            reply_markup: {
+              inline_keyboard: [[
+                {
+                  text: `Yes`,
+                  callback_data: 'a'
+                },
+                {
+                  text: 'No',
+                  callback_data: 'b'
+                }
+              ]]
+            }
+          });
     if (nota === 2)
-        bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/a1fwgWBeyu0a.png", { caption: "Allora, questa è la tavola " + tav + "...\nMA NON È POSSIBILE CHE UNA MEDIANA SIA A 17 DA UNA PARTE E A 12 DALL'ALTRA! È TUTTO STORTOOOH! ADESSO VAI AL POSTO E TI BECCHI CINQUEEEH!" });
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nMA NON È POSSIBILE CHE UNA MEDIANA SIA A 17 DA UNA PARTE E A 12 DALL'ALTRA! È TUTTO STORTOOOH! ADESSO VAI AL POSTO E TI BECCHI CINQUEEEH!");
     if (nota === 3)
-        bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/iWwtunBK3BGV.png", { caption: "Allora, questa è la tavola " + tav + "...\nVE L'HO DETTO MILLE VOLTE, IL CARTIGLIO SI FA DA METÀ FOGLIO, DEVO SEMPRE RIPETERE LE STESSE COSEEEEH! PER STAVOLTA METTIAMO SEI, MA È REGALATOOOH!" });
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nVE L'HO DETTO MILLE VOLTE, IL CARTIGLIO SI FA DA METÀ FOGLIO, DEVO SEMPRE RIPETERE LE STESSE COSEEEEH! PER STAVOLTA METTIAMO SEI, MA È REGALATOOOH!");
     if (nota === 4)
-        bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/-hjXQFtIcOvz.png", { caption: "Allora, questa è la tavola " + tav + "...\nLa tavola si presenta bene... I segni sono omogenei e non ci sono errori gravi, anche i titoli sono fatti bene... Tutto sommato è una bella tavola, mettiamo sette." });
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nLa tavola si presenta bene... I segni sono omogenei e non ci sono errori gravi, anche i titoli sono fatti bene... Tutto sommato è una bella tavola, mettiamo sette.");
     if (nota === 5)
-        bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/ce6OnbO7gZTF.png", { caption: "Allora, questa è la tavola " + tav + "...\nCOS'È STO SEGNO ORRIBILE?! VAI AL POSTO E SISTEMALO ALTRIMENTI TI BECCHI TRE E TE LO TIENIIIH!" });
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nCOS'È STO SEGNO ORRIBILE?! VAI AL POSTO E SISTEMALO ALTRIMENTI TI BECCHI TRE E TE LO TIENIIIH!");
 });
 
 
