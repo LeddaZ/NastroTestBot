@@ -541,7 +541,41 @@ bot.onText(/\/nota/, (msg) => {
 });
 
 
-//Risposta alla pressione di un pulsante su BusiAudio
+//Codice di /consegna
+bot.onText(/\/consegna/, (msg) => {
+
+    //Numero di tavole
+    var tav = Math.floor(Math.random() * (13 - 1 + 1) + 1)
+
+    //Numero di note
+    var nota = Math.floor(Math.random() * (5 - 1 + 1) + 1)
+    if (nota === 1)
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? TI METTO SEI E MEZZO RE-GA-LA-TO, CHI È CHE TIENE LA CONTABILITÀ DEI VOTI? SCRIVI BASTA SEIIIH!\nHai mezzi voti?", {
+            reply_markup: {
+              inline_keyboard: [[
+                {
+                  text: `Sì`,
+                  callback_data: 'yep'
+                },
+                {
+                  text: 'No',
+                  callback_data: 'nope'
+                }
+              ]]
+            }
+          });
+    if (nota === 2)
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nMA NON È POSSIBILE CHE UNA MEDIANA SIA A 17 DA UNA PARTE E A 12 DALL'ALTRA! È TUTTO STORTOOOH! ADESSO VAI AL POSTO E TI BECCHI CINQUEEEH!");
+    if (nota === 3)
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nVE L'HO DETTO MILLE VOLTE, IL CARTIGLIO SI FA DA METÀ FOGLIO, DEVO SEMPRE RIPETERE LE STESSE COSEEEEH! PER STAVOLTA METTIAMO SEI, MA È REGALATOOOH!");
+    if (nota === 4)
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nLa tavola si presenta bene... I segni sono omogenei e non ci sono errori gravi, anche i titoli sono fatti bene... Tutto sommato è una bella tavola, mettiamo sette.");
+    if (nota === 5)
+        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nCOS'È STO SEGNO ORRIBILE?! VAI AL POSTO E SISTEMALO ALTRIMENTI TI BECCHI TRE E TE LO TIENIIIH!");
+});
+
+
+//Risposta alla pressione di un pulsante su BusiAudio o /consegna
 bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 	var action = callbackQuery.data;
 	var msg = callbackQuery.message;
@@ -550,22 +584,39 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 	//Lista audio pagina 1
 	if (action === '1') {
         text = 'Lista audio del Busi\nPagina 1\nAutoCAD, Brutto sto qua, Busata è un sapiente, Busirena, Compassione, Due, Gomma, Hai capito, Busi16, Insolente, Nirvana lento, Nirvana, Norvegia, Ti caccio via, Violenza privata, Palazzo, Facebook, Cosmo, Orco, Orco2';
+        let mezzo = 0
     }
 
     //Lista audio pagina 2
 	if (action === '2') {
         text = "Lista audio del Busi\nPagina 2\nChe schifo, BusiAcuto, Marchesin, Viva la rivoluzione, Bassi, Benvegnù, Cacciato via, Guerra, Marchesin vai via, Carta stracciata, Mi avete stufato, Vedovato traffica, Terrapiattisti, Orari, Povero Guerra, Moro, Macchine, Falasco, Busi bestemmia, Merja fa andare Busi all'inferno";
+        let mezzo = 0
     }
 
     //Lista audio pagina 3
 	if (action === '3') {
         text = "Lista audio del Busi\nPagina 3\nDevo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti";
+        let mezzo = 0
     }
 
     //Lista audio pagina 4
     if (action === '4') {
         text = "Lista audio del Busi\nPagina 4\nMetto 2 subito, Porta la cartellina, Merja bocciato, Vedovato è un poeta, Busata perde tutto, Ciuccia il tè, Il filo, Previo terrorismo, Busi è perfido, Orco can, Calma assoluta, Rivoluzionario, Ferragosto, Telecamera, Tigri stecchite, Ventiquattrore, Via, Titoli";
+        let mezzo = 0
     } 
+
+    //Con mezzo voto
+    if (action === 'yep') {
+        text = 'VAI A PRENDERE LA TAVOLA, NON MI FIDO DI VOI!';
+        let mezzo = 1
+    }
+
+    //Senza mezzo voto
+    if (action === 'nope') {
+        text = "E ALLORA TI TIENI SEI E VAI AL POSTO!";
+        let mezzo = 1
+    }
+
 
     //Visualizzazione dei pulsanti di BusiAudio anche dopo la pressione
 	var opts = {
@@ -581,8 +632,8 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 		}
     };
 
-    //Modifica del messaggio per visualizzare la lista di audio con i pulsanti
-	bot.editMessageText(text, opts);
+    //Modifica del messaggio per visualizzare la lista di audio con i pulsanti o il testo del mezzo voto
+    bot.editMessageText(text, opts);
 });
 
 
@@ -637,40 +688,6 @@ bot.onText(/\/ritorna/, function(msg){
             bot.sendMessage(chatId, "CHI È STO QUA? VAI VIA, SOLO GLI AMMINISTRATORI POSSONO DIRE AL BUSATA CHI DEVE TORNARE!");
         }
     })
-});
-
-
-//Codice di /consegna
-bot.onText(/\/consegna/, (msg) => {
-
-    //Numero di tavole
-    var tav = Math.floor(Math.random() * (13 - 1 + 1) + 1)
-
-    //Numero di note
-    var nota = Math.floor(Math.random() * (5 - 1 + 1) + 1)
-    if (nota === 1)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? TI METTO SEI E MEZZO RE-GA-LA-TO, CHI È CHE TIENE LA CONTABILITÀ DEI VOTI? SCRIVI BASTA SEIIIH!\nHai mezzi voti?", {
-            reply_markup: {
-              inline_keyboard: [[
-                {
-                  text: `Yes`,
-                  callback_data: 'a'
-                },
-                {
-                  text: 'No',
-                  callback_data: 'b'
-                }
-              ]]
-            }
-          });
-    if (nota === 2)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nMA NON È POSSIBILE CHE UNA MEDIANA SIA A 17 DA UNA PARTE E A 12 DALL'ALTRA! È TUTTO STORTOOOH! ADESSO VAI AL POSTO E TI BECCHI CINQUEEEH!");
-    if (nota === 3)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nVE L'HO DETTO MILLE VOLTE, IL CARTIGLIO SI FA DA METÀ FOGLIO, DEVO SEMPRE RIPETERE LE STESSE COSEEEEH! PER STAVOLTA METTIAMO SEI, MA È REGALATOOOH!");
-    if (nota === 4)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nLa tavola si presenta bene... I segni sono omogenei e non ci sono errori gravi, anche i titoli sono fatti bene... Tutto sommato è una bella tavola, mettiamo sette.");
-    if (nota === 5)
-        bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nCOS'È STO SEGNO ORRIBILE?! VAI AL POSTO E SISTEMALO ALTRIMENTI TI BECCHI TRE E TE LO TIENIIIH!");
 });
 
 
