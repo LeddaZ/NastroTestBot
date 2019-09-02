@@ -15,7 +15,6 @@ var t1 = "loddo";
 var t2 = "buongiorno";
 var t3 = "non ho lo scotch";
 var t4 = "popopopo";
-var t5 = "businfo";
 var t7 = "merja";
 var t8 = "tigre";
 var t10 = "chi sei";
@@ -136,7 +135,7 @@ var app = require('./package.json');
 var ver = app.version;
 
 //Testo di Businfo e /start
-var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>" + ver + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (31 parole, 7 comandi, 8 foto e 78 audio)"
+var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>" + ver + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (30 parole, 8 comandi, 8 foto e 78 audio)"
    
 
 //Codice del bot
@@ -168,9 +167,6 @@ bot.on("message", (msg) => {
 
     if (msg.text.toString().toLowerCase().indexOf(t4) === 0)
         bot.sendMessage(msg.chat.id, "VAI FUORI DALLA PORTAAAAAH!");
-
-    if (msg.text.toString().toLowerCase().indexOf(t5) === 0)
-        bot.sendMessage(msg.chat.id, start, { parse_mode: "HTML" });
 
     if (msg.text.toString().toLowerCase().indexOf(t7) === 0)
         if (msg.text.toString().toLowerCase().indexOf(t100) === 0)
@@ -508,8 +504,11 @@ bot.on("message", (msg) => {
 });
 
 
-//Visualizzazione di Businfo con /start
+//Codice di /start e /businfo
 bot.onText(/\/start/, (msg) => {
+	bot.sendMessage(msg.chat.id, start, { parse_mode: "HTML" });
+});
+bot.onText(/\/businfo/, (msg) => {
 	bot.sendMessage(msg.chat.id, start, { parse_mode: "HTML" });
 });
 
