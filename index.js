@@ -27,7 +27,6 @@ var t15 = "biobusi";
 var t16 = "non ho la tavola";
 var t17 = "due";
 var t18 = "ma non ho fatto niente";
-var t19 = "BusiAudio";
 var t20 = "autocad";
 var t21 = "brutto sto qua";
 var t22 = "busata è un sapiente";
@@ -137,7 +136,7 @@ var app = require('./package.json');
 var ver = app.version;
 
 //Testo di Businfo e /start
-var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>" + ver + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)"
+var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>" + ver + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (31 parole, 7 comandi, 8 foto e 78 audio)"
    
 
 //Codice del bot
@@ -205,9 +204,6 @@ bot.on("message", (msg) => {
 
     if (msg.text.toString().toLowerCase().indexOf(t18) === 0)
         bot.sendMessage(msg.chat.id, "VAI VIAAAAAAAAH!");
-
-    if (msg.text.toString().indexOf(t19) === 0)
-        bot.sendMessage(msg.chat.id, 'Lista audio del Busi\nSeleziona la pagina', opts);
 
     if (msg.text.toString().toLowerCase().indexOf(t20) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/CujnZBJRaRS9.mp3");
@@ -518,6 +514,12 @@ bot.onText(/\/start/, (msg) => {
 });
 
 
+//Codice di /audio
+bot.onText(/\/audio/, (msg) => {   
+    bot.sendMessage(msg.chat.id, "<b>Lista di audio del Busi</b>\nAutoCAD, Brutto sto qua, Busata è un sapiente, Busirena, Compassione, Due, Gomma, Hai capito, Busi16, Insolente, Nirvana lento, Nirvana, Norvegia, Ti caccio via, Violenza privata, Palazzo, Facebook, Cosmo, Orco, Orco2, Che schifo, BusiAcuto, Marchesin, Viva la rivoluzione, Bassi, Benvegnù, Cacciato via, Guerra, Marchesin vai via, Carta stracciata, Mi avete stufato, Vedovato traffica, Terrapiattisti, Orari, Povero Guerra, Moro, Macchine, Falasco, Busi bestemmia, Merja fa andare Busi all'inferno, Devo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti, Metto 2 subito, Porta la cartellina, Merja bocciato, Vedovato è un poeta, Busata perde tutto, Ciuccia il tè, Il filo, Previo terrorismo, Busi è perfido, Orco can, Calma assoluta, Rivoluzionario, Ferragosto, Telecamera, Tigri stecchite, Ventiquattrore, Via, Titoli", { parse_mode: "HTML" });
+});
+
+
 //Codice di /nota
 bot.onText(/\/nota/, (msg) => {
 	var nota = Math.floor(Math.random()*(7-1+1)+1)
@@ -551,7 +553,7 @@ bot.onText(/\/consegna/, (msg) => {
             reply_markup: {
               inline_keyboard: [[
                 {
-                  text: `Sì`,
+                  text: 'Sì',
                   callback_data: 'yep'
                 },
                 {
@@ -572,31 +574,11 @@ bot.onText(/\/consegna/, (msg) => {
 });
 
 
-//Risposta alla pressione di un pulsante su BusiAudio o /consegna
+//Risposta al mezzo voto su /consegna
 bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 	var action = callbackQuery.data;
 	var msg = callbackQuery.message;
     let text;
-
-	//Lista audio pagina 1
-	if (action === '1') {
-        text = 'Lista audio del Busi\nPagina 1\nAutoCAD, Brutto sto qua, Busata è un sapiente, Busirena, Compassione, Due, Gomma, Hai capito, Busi16, Insolente, Nirvana lento, Nirvana, Norvegia, Ti caccio via, Violenza privata, Palazzo, Facebook, Cosmo, Orco, Orco2';
-    }
-
-    //Lista audio pagina 2
-	if (action === '2') {
-        text = "Lista audio del Busi\nPagina 2\nChe schifo, BusiAcuto, Marchesin, Viva la rivoluzione, Bassi, Benvegnù, Cacciato via, Guerra, Marchesin vai via, Carta stracciata, Mi avete stufato, Vedovato traffica, Terrapiattisti, Orari, Povero Guerra, Moro, Macchine, Falasco, Busi bestemmia, Merja fa andare Busi all'inferno";
-    }
-
-    //Lista audio pagina 3
-	if (action === '3') {
-        text = "Lista audio del Busi\nPagina 3\nDevo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti";
-    }
-
-    //Lista audio pagina 4
-    if (action === '4') {
-        text = "Lista audio del Busi\nPagina 4\nMetto 2 subito, Porta la cartellina, Merja bocciato, Vedovato è un poeta, Busata perde tutto, Ciuccia il tè, Il filo, Previo terrorismo, Busi è perfido, Orco can, Calma assoluta, Rivoluzionario, Ferragosto, Telecamera, Tigri stecchite, Ventiquattrore, Via, Titoli";
-    } 
 
     //Con mezzo voto
     if (action === 'yep') {
@@ -608,23 +590,8 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
         text = "E ALLORA TI TIENI SEI E VAI AL POSTO!";
     }
 
-
-    //Visualizzazione dei pulsanti di BusiAudio anche dopo la pressione
-	var opts = {
-		chat_id: msg.chat.id,
-		message_id: msg.message_id,
-		reply_markup: {
-			inline_keyboard: [
-				[{ text: 'Pagina 1', callback_data: '1' }],
-				[{ text: 'Pagina 2', callback_data: '2' }],
-                [{ text: 'Pagina 3', callback_data: '3' }],
-                [{ text: 'Pagina 4', callback_data: '4' }]
-			]
-		}
-    };
-
-    //Modifica del messaggio per visualizzare la lista di audio con i pulsanti o il testo del mezzo voto
-    bot.editMessageText(text, opts);
+    //Invio del testo del mezzo voto
+    bot.sendMessage(msg.chat.id, text);
 });
 
 
@@ -684,9 +651,7 @@ bot.onText(/\/ritorna/, function(msg){
 
 //Codice di /trigger
 bot.onText(/\/ritorna/, function(msg){
-
     bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <qualsiasi cosa>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, /voto, 120 tavole, Cattivo, Busascii, /nota, Paperette, BusiAmazon, Voti, Nota, /consegna, /caccia, /ritorna", { parse_mode: "HTML" });
-    
 });
 
 //Fine del codice
