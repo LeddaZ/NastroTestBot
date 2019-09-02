@@ -145,7 +145,7 @@ bot.on("message", (msg) => {
 
     //Risposte ai trigger
     if (msg.text.toString().toLowerCase().indexOf(t1) === 0)
-        bot.sendAudio(msg.chat.id, "LODDOOOOOOOOOO!");
+        bot.sendMessage(msg.chat.id, "LODDOOOOOOOOOO!");
 
     if (msg.text.toString().toLowerCase().indexOf(t2) === 0)
         bot.sendMessage(msg.chat.id, "BUONGIORNO SEDUTI! SI VA IN LABORATORIOH!");
