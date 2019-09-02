@@ -143,18 +143,6 @@ console.log("Il Busi " + ver + " è stato avviato correttamente :)");
 const bot = new Bot(token, {polling: true});
 bot.on("message", (msg) => {
 
-    //Pulsanti per BusiAudio
-    var opts = {
-        reply_markup: {
-            inline_keyboard: [
-                [{ text: 'Pagina 1', callback_data: '1' }],
-                [{ text: 'Pagina 2', callback_data: '2' }],
-                [{ text: 'Pagina 3', callback_data: '3' }],
-                [{ text: 'Pagina 4', callback_data: '4' }]
-            ]
-        }
-    };
-
     //Risposte ai trigger
     if (msg.text.toString().toLowerCase().indexOf(t1) === 0)
         bot.sendAudio(msg.chat.id, "LODDOOOOOOOOOO!");
