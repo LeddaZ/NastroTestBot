@@ -16,7 +16,6 @@ var t2 = "buongiorno";
 var t3 = "non ho lo scotch";
 var t4 = "popopopo";
 var t5 = "businfo";
-var t6 = "busitrigger";
 var t7 = "merja";
 var t8 = "tigre";
 var t10 = "chi sei";
@@ -139,12 +138,13 @@ var ver = app.version;
 
 //Testo di Businfo e /start
 var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>" + ver + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (33 parole, 5 comandi, 8 foto e 78 audio)"
-
+   
 
 //Codice del bot
 console.log("Il Busi " + ver + " è stato avviato correttamente :)");
 const bot = new Bot(token, {polling: true});
 bot.on("message", (msg) => {
+
     //Pulsanti per BusiAudio
     var opts = {
         reply_markup: {
@@ -156,7 +156,7 @@ bot.on("message", (msg) => {
             ]
         }
     };
-    
+
     //Risposte ai trigger
     if (msg.text.toString().toLowerCase().indexOf(t1) === 0)
         bot.sendAudio(msg.chat.id, "LODDOOOOOOOOOO!");
@@ -172,9 +172,6 @@ bot.on("message", (msg) => {
 
     if (msg.text.toString().toLowerCase().indexOf(t5) === 0)
         bot.sendMessage(msg.chat.id, start, { parse_mode: "HTML" });
-
-    if (msg.text.toString().toLowerCase().indexOf(t6) === 0)
-        bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <qualsiasi cosa>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, /voto, 120 tavole, Cattivo, Busascii, /nota, Paperette, BusiAmazon, Voti, Nota, /consegna, /caccia, /ritorna", { parse_mode: "HTML" });
 
     if (msg.text.toString().toLowerCase().indexOf(t7) === 0)
         if (msg.text.toString().toLowerCase().indexOf(t100) === 0)
@@ -584,37 +581,31 @@ bot.on('callback_query', function onCallbackQuery(callbackQuery) {
 	//Lista audio pagina 1
 	if (action === '1') {
         text = 'Lista audio del Busi\nPagina 1\nAutoCAD, Brutto sto qua, Busata è un sapiente, Busirena, Compassione, Due, Gomma, Hai capito, Busi16, Insolente, Nirvana lento, Nirvana, Norvegia, Ti caccio via, Violenza privata, Palazzo, Facebook, Cosmo, Orco, Orco2';
-        let mezzo = 0
     }
 
     //Lista audio pagina 2
 	if (action === '2') {
         text = "Lista audio del Busi\nPagina 2\nChe schifo, BusiAcuto, Marchesin, Viva la rivoluzione, Bassi, Benvegnù, Cacciato via, Guerra, Marchesin vai via, Carta stracciata, Mi avete stufato, Vedovato traffica, Terrapiattisti, Orari, Povero Guerra, Moro, Macchine, Falasco, Busi bestemmia, Merja fa andare Busi all'inferno";
-        let mezzo = 0
     }
 
     //Lista audio pagina 3
 	if (action === '3') {
         text = "Lista audio del Busi\nPagina 3\nDevo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti";
-        let mezzo = 0
     }
 
     //Lista audio pagina 4
     if (action === '4') {
         text = "Lista audio del Busi\nPagina 4\nMetto 2 subito, Porta la cartellina, Merja bocciato, Vedovato è un poeta, Busata perde tutto, Ciuccia il tè, Il filo, Previo terrorismo, Busi è perfido, Orco can, Calma assoluta, Rivoluzionario, Ferragosto, Telecamera, Tigri stecchite, Ventiquattrore, Via, Titoli";
-        let mezzo = 0
     } 
 
     //Con mezzo voto
     if (action === 'yep') {
         text = 'VAI A PRENDERE LA TAVOLA, NON MI FIDO DI VOI!';
-        let mezzo = 1
     }
 
     //Senza mezzo voto
     if (action === 'nope') {
         text = "E ALLORA TI TIENI SEI E VAI AL POSTO!";
-        let mezzo = 1
     }
 
 
@@ -690,6 +681,13 @@ bot.onText(/\/ritorna/, function(msg){
     })
 });
 
+
+//Codice di /trigger
+bot.onText(/\/ritorna/, function(msg){
+
+    bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <qualsiasi cosa>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, /voto, 120 tavole, Cattivo, Busascii, /nota, Paperette, BusiAmazon, Voti, Nota, /consegna, /caccia, /ritorna", { parse_mode: "HTML" });
+    
+});
 
 //Fine del codice
 
