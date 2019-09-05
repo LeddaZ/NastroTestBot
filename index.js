@@ -511,19 +511,19 @@ bot.onText(/\/audio/, (msg) => {
 bot.onText(/\/nota/, (msg) => {
 	var nota = Math.floor(Math.random()*(7-1+1)+1)
     if (nota === 1)
-        bot.sendMessage(msg.chat.id, msg.from.first_name + ", in laboratorio, sfoglia appunti di chimica invece di disegnare.");
+        bot.sendMessage(msg.chat.id, msg.from.username + ", in laboratorio, sfoglia appunti di chimica invece di disegnare.");
     else if (nota === 2)
-        bot.sendMessage(msg.chat.id, msg.from.first_name + " in laboratorio non si applica.");
+        bot.sendMessage(msg.chat.id, msg.from.username + " in laboratorio non si applica.");
     else if (nota === 3)
-        bot.sendMessage(msg.chat.id, msg.from.first_name + ", per suscitare l'ilarità dei compagni, straccia la tavola di disegno dando colpi con la testa.");
+        bot.sendMessage(msg.chat.id, msg.from.username + ", per suscitare l'ilarità dei compagni, straccia la tavola di disegno dando colpi con la testa.");
     else if (nota === 4)
-        bot.sendMessage(msg.chat.id, msg.from.first_name + " in laboratorio non disegna e non fa nulla.");
+        bot.sendMessage(msg.chat.id, msg.from.username + " in laboratorio non disegna e non fa nulla.");
 	else if (nota === 5)
-		bot.sendMessage(msg.chat.id, msg.from.first_name + " svuota lo zaino per pulirlo, poi chiede di avere il materiale per pulire il banco.");
+		bot.sendMessage(msg.chat.id, msg.from.username + " svuota lo zaino per pulirlo, poi chiede di avere il materiale per pulire il banco.");
 	else if (nota === 6)
-        bot.sendMessage(msg.chat.id, msg.from.first_name + " disturba continuamente la lezione chiaccherando.");
+        bot.sendMessage(msg.chat.id, msg.from.username + " disturba continuamente la lezione chiaccherando.");
     else if (nota === 7)
-        bot.sendMessage(msg.chat.id, msg.from.first_name + " gira per la classe chiedendo il materiale da disegno.");
+        bot.sendMessage(msg.chat.id, msg.from.username + " gira per la classe chiedendo il materiale da disegno.");
 });
 
 
