@@ -130,11 +130,11 @@ var t125 = "titoli";
 //Token del bot
 var token = process.env.TEST_TOKEN;
 
-//Versione del bot
+//Versione del bot da package.json
 var package = require('./package.json');
 var ver = package.version;
 
-//Testo di Businfo e /start
+//Testo di /businfo e /start
 var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>" + ver + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (30 parole, 8 comandi, 8 foto e 78 audio)"
    
 
@@ -501,6 +501,12 @@ bot.onText(/\/businfo/, (msg) => {
 });
 
 
+//Codice di /trigger
+bot.onText(/\/ritorna/, function(msg){
+    bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <qualsiasi cosa>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, /voto, 120 tavole, Cattivo, Busascii, /nota, Paperette, BusiAmazon, Voti, Nota, /consegna, /caccia, /ritorna", { parse_mode: "HTML" });
+});
+
+
 //Codice di /audio
 bot.onText(/\/audio/, (msg) => {   
     bot.sendMessage(msg.chat.id, "<b>Lista di audio del Busi</b>\nAutoCAD, Brutto sto qua, Busata è un sapiente, Busirena, Compassione, Due, Gomma, Hai capito, Busi16, Insolente, Nirvana lento, Nirvana, Norvegia, Ti caccio via, Violenza privata, Palazzo, Facebook, Cosmo, Orco, Orco2, Che schifo, BusiAcuto, Marchesin, Viva la rivoluzione, Bassi, Benvegnù, Cacciato via, Guerra, Marchesin vai via, Carta stracciata, Mi avete stufato, Vedovato traffica, Terrapiattisti, Orari, Povero Guerra, Moro, Macchine, Falasco, Busi bestemmia, Merja fa andare Busi all'inferno, Devo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti, Metto 2 subito, Porta la cartellina, Merja bocciato, Vedovato è un poeta, Busata perde tutto, Ciuccia il tè, Il filo, Previo terrorismo, Busi è perfido, Orco can, Calma assoluta, Rivoluzionario, Ferragosto, Telecamera, Tigri stecchite, Ventiquattrore, Via, Titoli", { parse_mode: "HTML" });
@@ -509,7 +515,8 @@ bot.onText(/\/audio/, (msg) => {
 
 //Codice di /nota
 bot.onText(/\/nota/, (msg) => {
-	var nota = Math.floor(Math.random()*(7-1+1)+1)
+    //Numero di note
+	var nota = Math.floor(Math.random() * ( 7 - 1 + 1 ) + 1 )
     if (nota === 1)
         bot.sendMessage(msg.chat.id, msg.from.username + ", in laboratorio, sfoglia appunti di chimica invece di disegnare.");
     else if (nota === 2)
@@ -533,9 +540,9 @@ bot.onText(/\/consegna/, (msg) => {
     //Numero di tavole
     var tav = Math.floor(Math.random() * (13 - 1 + 1) + 1)
 
-    //Numero di note
-    var nota = Math.floor(Math.random() * (5 - 1 + 1) + 1)
-    if (nota === 1)
+    //Numero di possibili correzioni
+    var esito = Math.floor(Math.random() * (5 - 1 + 1) + 1)
+    if (esito === 1)
         bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nLa tavola non si presenta neanche male... BRUTTO STO QUA! I SEGNI DEVONO ESSERE PIÙ OMOGENEI, POSSIBILE CHE NON L'ABBIATE ANCORA CAPITOOH!? TI METTO SEI E MEZZO RE-GA-LA-TO, CHI È CHE TIENE LA CONTABILITÀ DEI VOTI? SCRIVI BASTA SEIIIH!\nHai mezzi voti?", {
             reply_markup: {
               inline_keyboard: [[
@@ -550,13 +557,13 @@ bot.onText(/\/consegna/, (msg) => {
               ]]
             }
           });
-    if (nota === 2)
+    if (esito === 2)
         bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nMA NON È POSSIBILE CHE UNA MEDIANA SIA A 17 DA UNA PARTE E A 12 DALL'ALTRA! È TUTTO STORTOOOH! ADESSO VAI AL POSTO E TI BECCHI CINQUEEEH!");
-    if (nota === 3)
+    if (esito === 3)
         bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nVE L'HO DETTO MILLE VOLTE, IL CARTIGLIO SI FA DA METÀ FOGLIO, DEVO SEMPRE RIPETERE LE STESSE COSEEEEH! PER STAVOLTA METTIAMO SEI, MA È REGALATOOOH!");
-    if (nota === 4)
+    if (esito === 4)
         bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nLa tavola si presenta bene... I segni sono omogenei e non ci sono errori gravi, anche i titoli sono fatti bene... Tutto sommato è una bella tavola, mettiamo sette.");
-    if (nota === 5)
+    if (esito === 5)
         bot.sendMessage(msg.chat.id, "Allora, questa è la tavola " + tav + "...\nCOS'È STO SEGNO ORRIBILE?! VAI AL POSTO E SISTEMALO ALTRIMENTI TI BECCHI TRE E TE LO TIENIIIH!");
 });
 
@@ -636,11 +643,6 @@ bot.onText(/\/ritorna/, function(msg){
     })
 });
 
-
-//Codice di /trigger
-bot.onText(/\/ritorna/, function(msg){
-    bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio <qualsiasi cosa>, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, /voto, 120 tavole, Cattivo, Busascii, /nota, Paperette, BusiAmazon, Voti, Nota, /consegna, /caccia, /ritorna", { parse_mode: "HTML" });
-});
 
 //Fine del codice
 
