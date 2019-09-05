@@ -131,8 +131,8 @@ var t125 = "titoli";
 var token = process.env.TEST_TOKEN;
 
 //Versione del bot
-var app = require('./package.json');
-var ver = app.version;
+var package = require('./package.json');
+var ver = package.version;
 
 //Testo di Businfo e /start
 var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>" + ver + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (30 parole, 8 comandi, 8 foto e 78 audio)"
