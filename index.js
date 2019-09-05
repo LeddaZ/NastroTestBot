@@ -599,11 +599,12 @@ bot.onText(/\/caccia/, (msg) => {
         bot.kickChatMember(chatId, replyId)
             .then(function(result){
                 bot.deleteMessage(chatId, messageId);
-                bot.sendMessage(chatId, replyName + " ADESSO TI CACCIO VIAAH!")
+                bot.sendMessage(chatId, replyName + " ADESSO TI CACCIO VIAAH!");
+                bot.sendMessage(chatId, replyName + "<i> è stato cacciato via malamente</i>", { parse_mode: "HTML" });
             })
         }
         else {
-        bot.sendMessage(chatId, "CHI È STO QUA? VAI VIA, SOLO GLI AMMINISTRATORI POSSONO DIRE AL BUSATA CHI VA CACCIATO!")
+        bot.sendMessage(chatId, "CHI È STO QUA? VAI VIA, SOLO GLI AMMINISTRATORI POSSONO DIRE AL BUSATA CHI VA CACCIATO!");
         }
     })
 });
