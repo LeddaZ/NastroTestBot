@@ -20,7 +20,6 @@ var t8 = "tigre";
 var t10 = "chi sei";
 var t11 = "salute";
 var t12 = "punto z";
-var t13 = "paesaggio veneto";
 var t14 = "farfalle";
 var t15 = "biobusi";
 var t16 = "non ho la tavola";
@@ -135,7 +134,7 @@ var package = require('./package.json');
 var ver = package.version;
 
 //Testo di /businfo e /start
-var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>" + ver + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (30 parole, 8 comandi, 8 foto e 78 audio)"
+var start = "<b>Il Busata [TEST]</b> by @LeddaZ\nVersione <code>" + ver + "</code>\nDigita <code>BusiTrigger</code> per la lista dei trigger\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\n122 trigger (29 parole, 9 comandi, 8 foto e 78 audio)"
    
 
 //Codice del bot
@@ -173,9 +172,6 @@ bot.on("message", (msg) => {
 
     if (msg.text.toString().toLowerCase().indexOf(t12) === 0)
         bot.sendMessage(msg.chat.id, "IL PUNTO Z È ALL'INFINITOOOH!");
-
-    if (msg.text.toString().toLowerCase().indexOf(t13) === 0)
-        bot.sendMessage(msg.chat.id, "<a href=\"http://www.paesaggioveneto.it/\">Paesaggio Veneto - Un'idea di <b>Renato Busata</b></a>", { parse_mode: "HTML" });
 
     if (msg.text.toString().toLowerCase().indexOf(t14) === 0)
         bot.sendMessage(msg.chat.id, "Le farfalle fanno AAAAAHHHHHH!");
@@ -510,6 +506,12 @@ bot.onText(/\/ritorna/, function(msg){
 //Codice di /audio
 bot.onText(/\/audio/, (msg) => {   
     bot.sendMessage(msg.chat.id, "<b>Lista di audio del Busi</b>\nAutoCAD, Brutto sto qua, Busata è un sapiente, Busirena, Compassione, Due, Gomma, Hai capito, Busi16, Insolente, Nirvana lento, Nirvana, Norvegia, Ti caccio via, Violenza privata, Palazzo, Facebook, Cosmo, Orco, Orco2, Che schifo, BusiAcuto, Marchesin, Viva la rivoluzione, Bassi, Benvegnù, Cacciato via, Guerra, Marchesin vai via, Carta stracciata, Mi avete stufato, Vedovato traffica, Terrapiattisti, Orari, Povero Guerra, Moro, Macchine, Falasco, Busi bestemmia, Merja fa andare Busi all'inferno, Devo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti, Metto 2 subito, Porta la cartellina, Merja bocciato, Vedovato è un poeta, Busata perde tutto, Ciuccia il tè, Il filo, Previo terrorismo, Busi è perfido, Orco can, Calma assoluta, Rivoluzionario, Ferragosto, Telecamera, Tigri stecchite, Ventiquattrore, Via, Titoli", { parse_mode: "HTML" });
+});
+
+
+//Codice di /trovabusi
+bot.onText(/\/trovabusi/, (msg) => {   
+    bot.sendMessage(msg.chat.id, "<b>Dove trovare il Busi</b>\n<a href=\"https://it-it.facebook.com/renato.busata/\">Facebook</a>\n<a href=\"https://www.amazon.it/s?i=stripbooks&rh=p_27%3ARenato+Busata&ref=dp_byline_sr_book_1/\">Amazon</a>\n<a href=\"https://didattica.unipd.it/off/docente/6B85B690A4276AB18048CD49115FA3CC/\">Università degli Studi di Padova</a>\n<a href=\"https://it.linkedin.com/in/renato-busata-1862856b/\">LinkedIn</a>\n<a href=\"https://www.paginebianche.it/padova/renato-busata.aejihcgfii/\">PagineBianche</a>\n<a href=\"https://www.ibs.it/libri/autori/Renato%20Busata/\">IBS</a>", { parse_mode: "HTML" });
 });
 
 
