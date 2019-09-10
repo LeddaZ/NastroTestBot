@@ -6,7 +6,7 @@
 //Dichiarazione variabili
 
 //Moduli npm richiesti
-var api = require("node-telegram-bot-api");
+var TelegramBot = require("node-telegram-bot-api");
 var request = require("request");
 var dotenv = require('dotenv').config();
 
@@ -139,7 +139,7 @@ var start = "<b>Renato Busata [TEST]</b>\nVersione <code>" + ver + "</code>\nDig
 
 //Codice del bot
 console.log("Il Busi " + ver + " è stato avviato correttamente :)");
-const bot = new api(token, {polling: true}); //Il polling serve per evitare che il bot si "spenga" se nessuno gli manda qualcosa
+const bot = new TelegramBot(token, {polling: true}); //Il polling serve per evitare che il bot si "spenga" se nessuno gli manda qualcosa
 bot.on("message", (msg) => {
 
     //Risposte ai trigger
