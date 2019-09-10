@@ -50,7 +50,6 @@ var t41 = "che schifo";
 var t42 = "busiacuto";
 var t43 = "marchesin";
 var t44 = "viva la rivoluzione";
-var t45 = "busifoto";
 var t46 = "oh no";
 var t47 = "non sono parallele";
 var t48 = "busecs";
@@ -267,9 +266,6 @@ bot.on("message", (msg) => {
             
     if (msg.text.toString().toLowerCase().indexOf(t44) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/UWhCnzcJps7h.mp3");
-        
-    if (msg.text.toString().toLowerCase().indexOf(t45) === 0)
-        bot.sendMessage(msg.chat.id, "<b>Lista foto del Busi</b>\nTigre, Cane procione, Pelliccia, Oh no, Non sono parallele, Busecs, Busecs2, Triggered", { parse_mode: "HTML" });
 
     if (msg.text.toString().toLowerCase().indexOf(t46) === 0)
         bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/wrQSmPlj55IH.jpg", { caption: "Oh no, non sono parallele..." });
@@ -512,6 +508,12 @@ bot.onText(/\/comandi/, function(msg){
 //Codice di /audio
 bot.onText(/\/audio/, (msg) => {   
     bot.sendMessage(msg.chat.id, "<b>Lista di audio del Busi</b>\nAutoCAD, Brutto sto qua, Busata è un sapiente, Busirena, Compassione, Due, Gomma, Hai capito, Busi16, Insolente, Nirvana lento, Nirvana, Norvegia, Ti caccio via, Violenza privata, Palazzo, Facebook, Cosmo, Orco, Orco2, Che schifo, BusiAcuto, Marchesin, Viva la rivoluzione, Bassi, Benvegnù, Cacciato via, Guerra, Marchesin vai via, Carta stracciata, Mi avete stufato, Vedovato traffica, Terrapiattisti, Orari, Povero Guerra, Moro, Macchine, Falasco, Busi bestemmia, Merja fa andare Busi all'inferno, Devo finire la tavola, Denti, Colpa di Guerra, Vedovato, Ti tieni il 2, Mister Fantastico, Governo, Il taglio di Guerra, Busi va all'inferno, Soddisfa il Busi, Andate via, Merja ha le mani giù, Busi è un po' tardo, Guerra a 90, Koreani mangiacani, Ledda studia chimica, Sfoglia il quaderno, Stare al mondo, Basta battere, Si diventa deficienti, Metto 2 subito, Porta la cartellina, Merja bocciato, Vedovato è un poeta, Busata perde tutto, Ciuccia il tè, Il filo, Previo terrorismo, Busi è perfido, Orco can, Calma assoluta, Rivoluzionario, Ferragosto, Telecamera, Tigri stecchite, Ventiquattrore, Via, Titoli", { parse_mode: "HTML" });
+});
+
+
+//Codice di /foto
+bot.onText(/\/foto/, (msg) => {
+	bot.sendMessage(msg.chat.id, "<b>Lista di foto del Busi</b>\nTigre, Cane procione, Pelliccia, Oh no, Non sono parallele, Busecs, Busecs2, Triggered", { parse_mode: "HTML" });
 });
 
 
