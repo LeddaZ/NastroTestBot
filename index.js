@@ -499,7 +499,13 @@ bot.onText(/\/businfo/, (msg) => {
 
 //Codice di /trigger
 bot.onText(/\/trigger/, function(msg){
-    bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio 'qualsiasi cosa', Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, /voto, 120 tavole, Cattivo, Busascii, /nota, Paperette, BusiAmazon, Voti, Nota, /consegna, /caccia, /ritorna", { parse_mode: "HTML" });
+    bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio 'qualsiasi cosa', Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, 120 tavole, Cattivo, Busascii, Paperette, BusiAmazon, Voti, Nota", { parse_mode: "HTML" });
+});
+
+
+//Codice di /comandi
+bot.onText(/\/comandi/, function(msg){
+    bot.sendMessage(msg.chat.id, "<b>Comandi del Busi</b>\n/start, /businfo, /audio, /foto, /voto, /nota, /consegna, /caccia, /ritorna, /trigger, /comandi, /trovabusi", { parse_mode: "HTML" });
 });
 
 
