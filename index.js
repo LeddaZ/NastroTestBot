@@ -114,7 +114,6 @@ var t111 = "120 tavole";
 var t112 = "cattivo";
 var t113 = "busasci";
 var t115 = "paperette";
-var t116 = "busiamazon";
 var t117 = "busicasa";
 var t118 = "ferragosto";
 var t119 = "telecamera";
@@ -451,9 +450,6 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(t115) === 0)
         bot.sendMessage(msg.chat.id, "OH! LE PAPERETTEEEH! AH LEDDA DOVREMO ISCRIVERLO A QUALCHE ASSOCIAZIONE, LUI CI TIENE A QUESTE COSEEEH!");
 
-    if (msg.text.toString().toLowerCase().indexOf(t116) === 0)
-        bot.sendMessage(msg.chat.id, "https://www.amazon.it/s?i=stripbooks&rh=p_27%3ARenato+Busata&ref=dp_byline_sr_book_1");
-
     if (msg.text.toString().toLowerCase().indexOf(t117) === 0)
         bot.sendLocation(msg.chat.id, 45.4244592, 11.8302266) & bot.sendMessage(msg.chat.id, "SE VENITE A TROVARE IL BUSATA VI CACCIA VIAAAAH!");
 
@@ -495,7 +491,7 @@ bot.onText(/\/businfo/, (msg) => {
 
 //Codice di /trigger
 bot.onText(/\/trigger/, function(msg){
-    bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Businfo, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z, Paesaggio veneto, Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, BusiAudio, BusiFoto, Dio 'qualsiasi cosa', Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, 120 tavole, Cattivo, Busascii, Paperette, BusiAmazon, Voti, Nota", { parse_mode: "HTML" });
+    bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, Dio 'qualsiasi cosa', Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, 120 tavole, Cattivo, Busascii, Paperette, BusiAmazon, Voti, Nota", { parse_mode: "HTML" });
 });
 
 
