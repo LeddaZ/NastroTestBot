@@ -123,10 +123,10 @@ var t123 = "voti";
 var t124 = "nota";
 var t125 = "titoli";
 
-//Token del bot
+//Lettura della token del bot da .env
 var token = process.env.TEST_TOKEN;
 
-//Versione del bot da package.json
+//Letura della versione del bot da package.json
 var package = require('./package.json');
 var ver = package.version;
 
@@ -135,8 +135,8 @@ var start = "<b>NastroTestBot</b> <code>v" + ver + "</code>\nDigita /trigger per
    
 
 //Codice del bot
-console.log("Il Busi " + ver + " è stato avviato correttamente :)");
-const bot = new TelegramBot(token, {polling: true}); //Il polling serve per evitare che il bot si "spenga" se nessuno gli manda qualcosa
+console.log("Il Busi " + ver + " è stato avviato correttamente :)"); //Se il codice non arriva a questo punto il bot non si è avviato
+const bot = new TelegramBot(token, {polling: true}); //Il polling serve per evitare che il bot si "spenga" se non riceve messaggi per qualche minuto
 bot.on("message", (msg) => {
 
     //Risposte ai trigger
