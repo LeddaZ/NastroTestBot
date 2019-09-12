@@ -21,7 +21,6 @@ var t10 = "chi sei";
 var t11 = "salute";
 var t12 = "punto z";
 var t14 = "farfalle";
-var t15 = "biobusi";
 var t16 = "non ho la tavola";
 var t17 = "due";
 var t18 = "ma non ho fatto niente";
@@ -173,9 +172,6 @@ bot.on("message", (msg) => {
 
     if (msg.text.toString().toLowerCase().indexOf(t14) === 0)
         bot.sendMessage(msg.chat.id, "Le farfalle fanno AAAAAHHHHHH!");
-
-    if (msg.text.toString().toLowerCase().indexOf(t15) === 0)
-        bot.sendMessage(msg.chat.id, "<b>Renato Busata</b> si laurea in architettura presso l'Istituto Universitario di Architettura di Venezia nel 1983. Dal 1989 è docente di disegno presso istituti e licei padovani. Tra le varie pubblicazioni si segnalano 'Testimonianze storiche e artistiche', edito dal Comune di Rubano; 'Piccolo manuale per affrontare un progetto di architettura' di Gangemi Editore, con l'introduzione di Franco Purini e Luigi Monetti; 'Architetture tra Roma e Milano nel secondo dopoguerra', Ed. Libreria Progetto. Nel 2006 è dottore di ricerca in Composizione architettonica presso l'Università IUAV di Venezia.", { parse_mode: "HTML" });
 
     if (msg.text.toString().toLowerCase().indexOf(t16) === 0)
         bot.sendMessage(msg.chat.id, "DUEEEEEEEEEE!");
@@ -498,6 +494,12 @@ bot.onText(/\/trigger/, function(msg){
 //Codice di /comandi
 bot.onText(/\/comandi/, function(msg){
     bot.sendMessage(msg.chat.id, "<b>Comandi del Busi</b>\n/start - Avvia il bot\n/businfo - Visualizza versione, numero di trigger e autore del bot\n/audio - Visualizza la lista di audio del Busi\n/foto - Visualizza la lista di foto del Busi\n/nota - Genera una nota del Busi\n/consegna - Simula la consegna di una tavola. Chi non ce l'ha si becca DUE!\n/caccia - Rispondere a un messaggio con questo comando per bannare la persona interessata\n/ritorna - Rispondere a un messaggio con questo comando per unbannare la persona interessata\n/trigger - Visualizza la lista di trigger\n/comandi - Visualizza la lista di comandi\n/trovabusi - Mostra alcuni link riguardanti il Busi", { parse_mode: "HTML" });
+});
+
+
+//Codice di /biobusi
+bot.onText(/\/biobusi/, (msg) => {
+    bot.sendMessage(msg.chat.id, "<b>Renato Busata</b> si laurea in architettura presso l'Istituto Universitario di Architettura di Venezia nel 1983. Dal 1989 è docente di disegno presso istituti e licei padovani. Tra le varie pubblicazioni si segnalano 'Testimonianze storiche e artistiche', edito dal Comune di Rubano; 'Piccolo manuale per affrontare un progetto di architettura' di Gangemi Editore, con l'introduzione di Franco Purini e Luigi Monetti; 'Architetture tra Roma e Milano nel secondo dopoguerra', Ed. Libreria Progetto. Nel 2006 è dottore di ricerca in Composizione architettonica presso l'Università IUAV di Venezia.", { parse_mode: "HTML" });
 });
 
 
