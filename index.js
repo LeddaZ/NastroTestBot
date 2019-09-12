@@ -131,7 +131,7 @@ var package = require('./package.json');
 var ver = package.version;
 
 //Testo di /businfo e /start
-var start = "<b>Renato Busata [TEST]</b>\nVersione <code>" + ver + "</code>\nDigita /trigger per la lista dei trigger o /comandi per la lista dei comandi\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\nBot creato da @LeddaZ"
+var start = "<b>NastroTestBot</b> <code>v" + ver + "</code>\nDigita /trigger per la lista dei trigger o /comandi per la lista dei comandi\n<a href=\"https://github.com/LeddaZ/NastroTestBot/\">Codice del bot su GitHub</a>\nBot creato da @LeddaZ"
    
 
 //Codice del bot
