@@ -293,7 +293,10 @@ bot.on("message", (msg) => {
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/_8BZYN9rxHtc.mp3");
         
     if (msg.text.toString().toLowerCase().indexOf(t56) === 0)
-        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/9DJk-rQW1X7x.mp3");
+        if (msg.text.toString().toLowerCase().indexOf(t90) === 0)
+            bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/9p0Z10a9-MO4.mp3")
+        else
+            bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/9DJk-rQW1X7x.mp3");
         
     if (msg.text.toString().toLowerCase().indexOf(t58) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/wUwwPneHVcVT.mp3");
@@ -382,9 +385,6 @@ bot.on("message", (msg) => {
         
     if (msg.text.toString().toLowerCase().indexOf(t89) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/iOTQpRkYkDsB.mp3");
-        
-    if (msg.text.toString().toLowerCase().indexOf(t90) === 0)
-        bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/9p0Z10a9-MO4.mp3");
         
     if (msg.text.toString().toLowerCase().indexOf(t91) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/ScdPvRncuuBJ.mp3");
