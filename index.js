@@ -486,13 +486,13 @@ bot.onText(/\/businfo/, (msg) => {
 
 
 //Codice di /trigger
-bot.onText(/\/trigger/, function(msg){
+bot.onText(/\/trigger/, (msg) => {
     bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, Dio 'qualsiasi cosa', Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, 120 tavole, Cattivo, Busascii, Paperette, BusiAmazon, Voti, Nota", { parse_mode: "HTML" });
 });
 
 
 //Codice di /comandi
-bot.onText(/\/comandi/, function(msg){
+bot.onText(/\/comandi/, (msg) => {
     bot.sendMessage(msg.chat.id, "<b>Comandi del Busi</b>\n/start - Avvia il bot\n/businfo - Visualizza versione e autore del bot\n/audio - Visualizza la lista di audio del Busi\n/foto - Visualizza la lista di foto del Busi\n/nota - Genera una nota del Busi\n/consegna - Simula la consegna di una tavola. Chi non ce l'ha si becca DUE!\n/caccia - Rispondere a un messaggio con questo comando per bannare la persona interessata\n/ritorna - Rispondere a un messaggio con questo comando per unbannare la persona interessata\n/trigger - Visualizza la lista di trigger\n/comandi - Visualizza la lista di comandi\n/trovabusi - Mostra alcuni link riguardanti il Busi", { parse_mode: "HTML" });
 });
 
@@ -626,7 +626,7 @@ bot.onText(/\/caccia/, (msg) => {
 
 
 //Codice di /ritorna
-bot.onText(/\/ritorna/, function(msg){
+bot.onText(/\/ritorna/, (msg) => {
     
     var chatId = msg.chat.id;
     var replyId = msg.reply_to_message.from.id;
