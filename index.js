@@ -493,7 +493,7 @@ bot.onText(/\/trigger/, function(msg){
 
 //Codice di /comandi
 bot.onText(/\/comandi/, function(msg){
-    bot.sendMessage(msg.chat.id, "<b>Comandi del Busi</b>\n/start - Avvia il bot\n/businfo - Visualizza versione, numero di trigger e autore del bot\n/audio - Visualizza la lista di audio del Busi\n/foto - Visualizza la lista di foto del Busi\n/nota - Genera una nota del Busi\n/consegna - Simula la consegna di una tavola. Chi non ce l'ha si becca DUE!\n/caccia - Rispondere a un messaggio con questo comando per bannare la persona interessata\n/ritorna - Rispondere a un messaggio con questo comando per unbannare la persona interessata\n/trigger - Visualizza la lista di trigger\n/comandi - Visualizza la lista di comandi\n/trovabusi - Mostra alcuni link riguardanti il Busi", { parse_mode: "HTML" });
+    bot.sendMessage(msg.chat.id, "<b>Comandi del Busi</b>\n/start - Avvia il bot\n/businfo - Visualizza versione e autore del bot\n/audio - Visualizza la lista di audio del Busi\n/foto - Visualizza la lista di foto del Busi\n/nota - Genera una nota del Busi\n/consegna - Simula la consegna di una tavola. Chi non ce l'ha si becca DUE!\n/caccia - Rispondere a un messaggio con questo comando per bannare la persona interessata\n/ritorna - Rispondere a un messaggio con questo comando per unbannare la persona interessata\n/trigger - Visualizza la lista di trigger\n/comandi - Visualizza la lista di comandi\n/trovabusi - Mostra alcuni link riguardanti il Busi", { parse_mode: "HTML" });
 });
 
 
