@@ -122,6 +122,9 @@ var t122 = "via";
 var t123 = "voti";
 var t124 = "nota";
 var t125 = "titoli";
+var t126 = "madonna";
+var t127 = "gesù";
+var t128 = "prospettiva";
 
 //Lettura della token del bot da .env
 var token = process.env.TEST_TOKEN;
@@ -277,8 +280,8 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(t50) === 0)
         bot.sendPhoto(msg.chat.id, "http://deaddrop.ftp.sh/E_FJlFM2gc0a.jpg", { caption: "NON SI SPRECA LA CARTAAAAAH!" });
         
-    if (msg.text.toString().toLowerCase().indexOf(t51) === 0)
-        if (msg.text.toString().toLowerCase().indexOf(t52) === 0)
+    if (msg.text.toString().toLowerCase().includes(t51) || msg.text.toString().toLowerCase().includes(t126) || msg.text.toString().toLowerCase().includes(t127))
+        if (msg.text.toString().toLowerCase().includes(t52))
 	        bot.sendMessage(msg.chat.id, "CHI È STO QUA? HO SENTITO UN CAGNOLINO PRECEDUTO DA QUALCOS'ALTROOOH!");
         else
             bot.sendMessage(msg.chat.id, "AH IO DEVO FARE LE INDAGINI, SÌ PERCHÉ LA GENTE BESTEMMIAAAAH!");
@@ -473,6 +476,9 @@ bot.on("message", (msg) => {
     if (msg.text.toString().toLowerCase().indexOf(t125) === 0)
         bot.sendAudio(msg.chat.id, "http://deaddrop.ftp.sh/Fg1aqSnMOkW0.mp3");
 
+    if (msg.text.toString().toLowerCase().indexOf(t128) === 0)
+        bot.sendMessage(msg.chat.id, "ALLORA, PER LA PROSPETTIVA SI FANNO I BINARI DEL TRENOOH... POI SI FA LA STAZIONE E L'ALBERELLOHHHHHH! E LE RETTE SI DEVONO INCONTRARE ALL'INFINITO, CI SIAMO CAPITIIIIIIIH?!");
+
 });
 
 
@@ -487,7 +493,7 @@ bot.onText(/\/businfo/, (msg) => {
 
 //Codice di /trigger
 bot.onText(/\/trigger/, (msg) => {
-    bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, Dio 'qualsiasi cosa', Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, 120 tavole, Cattivo, Busascii, Paperette, BusiAmazon, Voti, Nota", { parse_mode: "HTML" });
+    bot.sendMessage(msg.chat.id, "<b>Trigger del Busi</b>\nLoddo, Non ho lo scotch, Buongiorno, Popopopo, Merjaaa, Chi sei?, Salute, Punto Z Farfalle, BioBusi, Non ho la tavola, Ma non ho fatto niente, Qualsiasi bestemmia, Straccia la carta, Non ho capito, Orario, Animalismo a scuola, Cani, Liliana Segre, 120 tavole, Cattivo, Busascii, Paperette, BusiAmazon, Voti, Nota, Prospettiva", { parse_mode: "HTML" });
 });
 
 
